@@ -41,7 +41,9 @@ public class Home extends JFrame {
 	private JButton btnAddUsuario;
 	private JPanel Header;
 	private JLabel lblTitulo;
-	private JLabel lblNewLabel;
+	private JLabel lblUemLogo;
+	private JLabel label;
+	private JScrollPane scrollPaneRegistros;
 
 	public Home() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -51,7 +53,7 @@ public class Home extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 
-		JScrollPane scrollPaneRegistros = new JScrollPane();
+		scrollPaneRegistros = new JScrollPane();
 		scrollPaneRegistros.setBounds(100, 145, 800, 450);
 		contentPane.add(scrollPaneRegistros);
 
@@ -92,13 +94,20 @@ public class Home extends JFrame {
 		Header.setLayout(null);
 		
 		lblTitulo = new JLabel("Usuarios");
+		lblTitulo.setForeground(new Color(255, 255, 255));
 		lblTitulo.setHorizontalAlignment(SwingConstants.CENTER);
 		lblTitulo.setBounds(250, 0, 500, 100);
 		lblTitulo.setFont(new Font("Tahoma", Font.PLAIN, 50));
 		Header.add(lblTitulo);
 		
-		lblNewLabel = new JLabel("");
-		lblNewLabel.setBounds(10, 28, 46, 43);
-		Header.add(lblNewLabel);
+		lblUemLogo = new JLabel("Aqui Iria el logo");
+		lblUemLogo.setHorizontalAlignment(SwingConstants.CENTER);
+		lblUemLogo.setBounds(0, 0, 240, 100);
+		Header.add(lblUemLogo);
+		
+		label = new JLabel("Aqui Iria el logo");
+		label.setHorizontalAlignment(SwingConstants.CENTER);
+		label.setBounds(760, 0, 224, 100);
+		Header.add(label);
 	}
 }
