@@ -16,6 +16,9 @@ import java.awt.Label;
 import java.awt.Font;
 import java.awt.Toolkit;
 import javax.swing.JLabel;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class GestionRegistros extends JFrame {
 
@@ -50,6 +53,7 @@ public class GestionRegistros extends JFrame {
 	 * Create the frame.
 	 */
 	public GestionRegistros() {
+		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\usuario\\git\\ud5-tarea-3-aplicacion-swing-pi-roberto-aprende-linux\\img\\UEMLogo.png"));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1000, 800);
 		contentPane = new JPanel();
@@ -111,5 +115,18 @@ public class GestionRegistros extends JFrame {
 		HeaderPanel.add(lblTitulo);
 		 lblTitulo.setHorizontalAlignment(JLabel.CENTER);
 		 lblTitulo.setVerticalAlignment(JLabel.CENTER);
+		 
+		 JButton btnVolver = new JButton("Volver");
+		 btnVolver.setBounds(96, 690, 120, 40);
+		 contentPane.add(btnVolver);
+		 
+		 JButton btnBorrarRegistro = new JButton("Borrar Registro");
+		 btnBorrarRegistro.setBounds(436, 690, 120, 40);
+		 contentPane.add(btnBorrarRegistro);
+		 
+		 JButton btnAddRegistro = new JButton("A\u00F1adir Registro");
+	
+		 btnAddRegistro.setBounds(778, 690, 120, 40);
+		 contentPane.add(btnAddRegistro);
 	}
 }
