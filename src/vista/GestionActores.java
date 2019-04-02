@@ -32,6 +32,9 @@ public class GestionActores extends JFrame {
 	private JLabel lblTitulo;
 	private JLabel lblUemLogo;
 	private JLabel lblPerfil;
+	private JButton btnVolver;
+	private JButton btnAI_actor;
+	private JButton btnAddActor;
 	
 
 	/**
@@ -117,16 +120,16 @@ public class GestionActores extends JFrame {
 		lblPerfil.setBounds(760, 0, 224, 100);
 		HeaderPanel.add(lblPerfil);
 
-		JButton btnVolver = new JButton("Volver");
+		btnVolver = new JButton("Volver");
 		btnVolver.setBounds(96, 690, 120, 40);
 		contentPane.add(btnVolver);
 
-		JButton btnBorrarRegistro = new JButton("Activo/Inactivo");
-		btnBorrarRegistro.setBounds(436, 690, 120, 40);
-		contentPane.add(btnBorrarRegistro);
+		btnAI_actor = new JButton("Activo/Inactivo");
+		btnAI_actor.setBounds(436, 690, 120, 40);
+		contentPane.add(btnAI_actor);
 
-		JButton btnAddRegistro = new JButton(" A\u00F1adir actor");
-		btnAddRegistro.setBounds(778, 690, 120, 40);
-		contentPane.add(btnAddRegistro);
+		btnAddActor = new JButton(" A\u00F1adir actor");
+		btnAddActor.setBounds(778, 690, 120, 40);
+		contentPane.add(btnAddActor);
 	}
 }

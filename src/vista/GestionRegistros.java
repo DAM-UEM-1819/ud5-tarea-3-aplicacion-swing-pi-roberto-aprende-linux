@@ -36,6 +36,9 @@ public class GestionRegistros extends JFrame {
 	private JLabel lblTitulo;
 	private JLabel lblUemLogo;
 	private JLabel lblPerfil;
+	private JButton btnVolver;
+	private JButton btnBorrarRegistro;
+	private JButton btnAddRegistro;
 
 	/**
 	 * Create the frame.
@@ -109,15 +112,15 @@ public class GestionRegistros extends JFrame {
 		lblPerfil.setBounds(760, 0, 224, 100);
 		HeaderPanel.add(lblPerfil);
 
-		JButton btnVolver = new JButton("Volver");
+		btnVolver = new JButton("Volver");
 		btnVolver.setBounds(96, 690, 120, 40);
 		contentPane.add(btnVolver);
 
-		JButton btnBorrarRegistro = new JButton("Borrar Registro");
+		btnBorrarRegistro = new JButton("Borrar Registro");
 		btnBorrarRegistro.setBounds(436, 690, 120, 40);
 		contentPane.add(btnBorrarRegistro);
 
-		JButton btnAddRegistro = new JButton("A\u00F1adir Registro");
+		btnAddRegistro = new JButton("A\u00F1adir Registro");
 
 		btnAddRegistro.setBounds(778, 690, 120, 40);
 		contentPane.add(btnAddRegistro);
