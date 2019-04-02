@@ -26,6 +26,8 @@ import javax.swing.JLabel;
 import javax.swing.JLayeredPane;
 import javax.swing.UIManager;
 import javax.swing.JMenuBar;
+import javax.swing.JOptionPane;
+
 import java.awt.Font;
 import java.awt.FlowLayout;
 import javax.swing.SwingConstants;
@@ -59,6 +61,7 @@ public class GestionUsuarios extends JFrame {
 
 		tablaUsuarios = new JTable();
 		tablaUsuarios.setModel(new DefaultTableModel(new Object[][] {}, new String[] { "Usuarios", "Rol" }));
+		tablaUsuarios.setRowHeight(30);
 		scrollPaneRegistros.setViewportView(tablaUsuarios);
 
 		txtUsuario = new JTextField();
@@ -80,10 +83,18 @@ public class GestionUsuarios extends JFrame {
 		contentPane.add(btnVolver);
 
 		btnBorrarUsr = new JButton("Borrar Usuario");
+		btnBorrarUsr.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
 		btnBorrarUsr.setBounds(440, 685, 120, 40);
 		contentPane.add(btnBorrarUsr);
 
 		btnAddUsuario = new JButton("A\u00F1adir Usuario");
+		btnAddUsuario.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
 		btnAddUsuario.setBounds(782, 685, 120, 40);
 		contentPane.add(btnAddUsuario);
 		
@@ -109,5 +120,9 @@ public class GestionUsuarios extends JFrame {
 		lblPerfil.setHorizontalAlignment(SwingConstants.CENTER);
 		lblPerfil.setBounds(760, 0, 224, 100);
 		Header.add(lblPerfil);
+	}
+	
+	public void borrarUsuarioAlerta() {
+		JOptionPane.showConfirmDialog(rootPane, "¿Desea borrar el usuario seleccionado?");
 	}
 }
