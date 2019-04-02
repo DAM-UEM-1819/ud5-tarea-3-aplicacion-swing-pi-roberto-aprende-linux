@@ -59,6 +59,7 @@ public class GestionUsuarios extends JFrame {
 
 		tablaUsuarios = new JTable();
 		tablaUsuarios.setModel(new DefaultTableModel(new Object[][] {}, new String[] { "Usuarios", "Rol" }));
+		tablaUsuarios.setRowHeight(30);
 		scrollPaneRegistros.setViewportView(tablaUsuarios);
 
 		txtUsuario = new JTextField();
