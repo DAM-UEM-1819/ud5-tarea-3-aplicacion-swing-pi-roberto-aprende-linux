@@ -32,13 +32,17 @@ public class GestionActores extends JFrame {
 	private JLabel lblTitulo;
 	private JLabel lblUemLogo;
 	private JLabel lblPerfil;
-	
+	private JButton btnVolver;
+	private JButton btnAI_actor;
+	private JButton btnAddActor;
+	private JButton btnModificarActor;
 
 	/**
 	 * Launch the application.
 	 */
 
 	public GestionActores() {
+		setTitle("Actores gesti\u00F3n");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1000, 800);
 		contentPane = new JPanel();
@@ -52,14 +56,9 @@ public class GestionActores extends JFrame {
 
 		tablaActores = new JTable();
 		tablaActores.setModel(new DefaultTableModel(
-			new Object[][] {
-				{"1", "Raul", "20", "Hombre", "Bilingue", "Normal", "1"},
-				{null, null, null, null, null, null, null},
-			},
-			new String[] {
-				"Codigo Actor", "Nombre", "Edad", "Genero", "Idioma", "Complexion", "Activo"
-			}
-		));
+				new Object[][] { { "1", "Raul", "20", "Hombre", "Bilingue", "Normal", "1" },
+						{ null, null, null, null, null, null, null }, },
+				new String[] { "Codigo Actor", "Nombre", "Edad", "Genero", "Idioma", "Complexion", "Activo" }));
 		tablaActores.setRowHeight(40);
 		scrollPane.setViewportView(tablaActores);
 
@@ -87,7 +86,7 @@ public class GestionActores extends JFrame {
 		txtIdioma.setBounds(601, 629, 108, 30);
 		contentPane.add(txtIdioma);
 		txtIdioma.setColumns(10);
-		
+
 		txtComplexion = new JTextField();
 		txtComplexion.setColumns(10);
 		txtComplexion.setBounds(719, 629, 103, 30);
@@ -117,16 +116,20 @@ public class GestionActores extends JFrame {
 		lblPerfil.setBounds(760, 0, 224, 100);
 		HeaderPanel.add(lblPerfil);
 
-		JButton btnVolver = new JButton("Volver");
-		btnVolver.setBounds(96, 690, 120, 40);
+		btnVolver = new JButton("Volver");
+		btnVolver.setBounds(100, 685, 120, 40);
 		contentPane.add(btnVolver);
 
-		JButton btnBorrarRegistro = new JButton("Activo/Inactivo");
-		btnBorrarRegistro.setBounds(436, 690, 120, 40);
-		contentPane.add(btnBorrarRegistro);
+		btnModificarActor = new JButton("Modificar actor");
+		btnModificarActor.setBounds(325, 685, 120, 40);
+		contentPane.add(btnModificarActor);
 
-		JButton btnAddRegistro = new JButton(" A\u00F1adir actor");
-		btnAddRegistro.setBounds(778, 690, 120, 40);
-		contentPane.add(btnAddRegistro);
+		btnAI_actor = new JButton("Activo/Inactivo");
+		btnAI_actor.setBounds(575, 685, 120, 40);
+		contentPane.add(btnAI_actor);
+
+		btnAddActor = new JButton(" A\u00F1adir actor");
+		btnAddActor.setBounds(782, 685, 120, 40);
+		contentPane.add(btnAddActor);
 	}
 }
