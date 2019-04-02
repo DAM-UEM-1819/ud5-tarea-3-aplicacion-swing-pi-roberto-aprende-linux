@@ -20,14 +20,14 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JTextArea;
+import javax.swing.border.BevelBorder;
+import javax.swing.border.LineBorder;
 
-public class InformacionExtra extends JFrame {
+public class CrearUsuario extends JFrame {
 
 	private JPanel contentPane;
 	private JPanel HeaderPanel;
 	private JLabel lblTitulo;
-	private JTextArea txtrNose;
-	private JTable table_1;
 
 	/**
 	 * Launch the application.
@@ -36,7 +36,7 @@ public class InformacionExtra extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					InformacionExtra frame = new InformacionExtra();
+					CrearUsuario frame = new CrearUsuario();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -48,7 +48,7 @@ public class InformacionExtra extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public InformacionExtra() {
+	public CrearUsuario() {
 		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\usuario\\git\\ud5-tarea-3-aplicacion-swing-pi-roberto-aprende-linux\\img\\UEMLogo.png"));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1000, 800);
@@ -63,7 +63,7 @@ public class InformacionExtra extends JFrame {
 		contentPane.add(HeaderPanel);
 		HeaderPanel.setLayout(null);
 		
-		lblTitulo = new JLabel("Informaci\u00F3n Extra");
+		lblTitulo = new JLabel("Crear Usuario");
 		lblTitulo.setForeground(Color.WHITE);
 		lblTitulo.setBounds(280, 11, 467, 61);
 		lblTitulo.setFont(new Font("Tahoma", Font.PLAIN, 50));
@@ -72,30 +72,11 @@ public class InformacionExtra extends JFrame {
 		 lblTitulo.setVerticalAlignment(JLabel.CENTER);
 		 
 		 JButton btnVolver = new JButton("Volver");
-		 btnVolver.setBounds(457, 672, 120, 40);
+		 btnVolver.setBounds(153, 672, 120, 40);
 		 contentPane.add(btnVolver);
 		 
-		 JTable table = new JTable();
-		 table.setModel(new DefaultTableModel(
-		 	new Object[][] {
-		 		{"0001", "00000001P", "Pedro Camacho Ortega", "Medicina", "pedrocamachoortega@gmail.com", "666998877"},
-		 		{null, "00000002F", "Ra\u00FAl Rodr\u00EDguez Mercado", "Medicina", "raulrodriguezmercado@gmail.com", "666665544"},
-		 	},
-		 	new String[] {
-		 		"N\u00FAmero", "DNI", "Nombre y Apellidos", "Titulaci\u00F3n", "Mail", "Tel\u00E9fono"
-		 	}
-		 ));
-		 table.getColumnModel().getColumn(2).setPreferredWidth(145);
-		 table.getColumnModel().getColumn(4).setPreferredWidth(175);
-		 table.setBounds(78, 165, 818, 101);
-		 contentPane.add(table);
-		 
-		 txtrNose = new JTextArea();
-		 txtrNose.setBounds(78, 356, 824, 265);
-		 contentPane.add(txtrNose);
-		 
-		 table_1 = new JTable();
-		 table_1.setBounds(78, 361, 824, 258);
-		 contentPane.add(table_1);
+		 JButton btnCrearUsuario = new JButton("Crear Usuario");
+		 btnCrearUsuario.setBounds(690, 672, 120, 40);
+		 contentPane.add(btnCrearUsuario);
 	}
 }
