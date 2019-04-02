@@ -30,22 +30,24 @@ import java.awt.Font;
 import java.awt.FlowLayout;
 import javax.swing.SwingConstants;
 
-public class Home extends JFrame {
+public class Gestion extends JFrame {
 
 	private JPanel contentPane;
-	private JTable tablaUsuarios;
-	private JTextField txtUsuario;
-	private JTextField txtRol;
 	private JButton btnVolver;
-	private JButton btnBorrarUsr;
-	private JButton btnAddUsuario;
+	private JButton btnGestionUsuarios;
 	private JPanel Header;
 	private JLabel lblTitulo;
 	private JLabel lblUemLogo;
-	private JLabel label;
-	private JScrollPane scrollPaneRegistros;
+	private JLabel lblPerfil;
+	private JButton btnGestionarActividades;
+	private JButton btnGestionarAsignatura;
+	private JButton btnGestionarSalas;
+	private JButton btnGestionarActores;
+	private JButton btnGestionarProfesores;
+	private JButton btnGestionarAlumnos;
+	private JButton btnGestionRegistros;
 
-	public Home() {
+	public Gestion() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1000, 800);
 		contentPane = new JPanel();
@@ -53,39 +55,11 @@ public class Home extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 
-		scrollPaneRegistros = new JScrollPane();
-		scrollPaneRegistros.setBounds(100, 145, 800, 450);
-		contentPane.add(scrollPaneRegistros);
-
-		tablaUsuarios = new JTable();
-		tablaUsuarios.setModel(new DefaultTableModel(new Object[][] {}, new String[] { "Usuarios", "Rol" }));
-		scrollPaneRegistros.setViewportView(tablaUsuarios);
-
-		txtUsuario = new JTextField();
-		txtUsuario.setBounds(125, 600, 350, 30);
-		contentPane.add(txtUsuario);
-		txtUsuario.setColumns(10);
-
-		txtRol = new JTextField();
-		txtRol.setBounds(525, 600, 350, 30);
-		contentPane.add(txtRol);
-		txtRol.setColumns(10);
-
 		btnVolver = new JButton("Volver");
 		btnVolver.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		btnVolver.setBounds(100, 685, 120, 40);
-		contentPane.add(btnVolver);
-
-		btnBorrarUsr = new JButton("Borrar Usuario");
-		btnBorrarUsr.setBounds(440, 685, 120, 40);
-		contentPane.add(btnBorrarUsr);
-
-		btnAddUsuario = new JButton("A\u00F1adir Usuario");
-		btnAddUsuario.setBounds(782, 685, 120, 40);
-		contentPane.add(btnAddUsuario);
 		
 		Header = new JPanel();
 		Header.setBackground(new Color(165, 42, 42));
@@ -105,9 +79,47 @@ public class Home extends JFrame {
 		lblUemLogo.setBounds(0, 0, 240, 100);
 		Header.add(lblUemLogo);
 		
-		label = new JLabel("Aqui Iria el logo");
-		label.setHorizontalAlignment(SwingConstants.CENTER);
-		label.setBounds(760, 0, 224, 100);
-		Header.add(label);
+		lblPerfil = new JLabel("Aqui Iria el logo");
+		lblPerfil.setHorizontalAlignment(SwingConstants.CENTER);
+		lblPerfil.setBounds(760, 0, 224, 100);
+		Header.add(lblPerfil);
+		btnVolver.setBounds(423, 671, 120, 40);
+		contentPane.add(btnVolver);
+
+		btnGestionUsuarios = new JButton("Gestionar Usuarios");
+		btnGestionUsuarios.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			}
+		});
+		btnGestionUsuarios.setBounds(150, 214, 250, 60);
+		contentPane.add(btnGestionUsuarios);
+		
+		btnGestionRegistros = new JButton("Gestionar Registros");
+		btnGestionRegistros.setBounds(600, 214, 250, 60);
+		contentPane.add(btnGestionRegistros);
+		
+		btnGestionarActividades = new JButton("Gestionar Actividades");
+		btnGestionarActividades.setBounds(150, 323, 250, 60);
+		contentPane.add(btnGestionarActividades);
+		
+		btnGestionarAsignatura = new JButton("Gestionar Asignatura");
+		btnGestionarAsignatura.setBounds(600, 323, 250, 60);
+		contentPane.add(btnGestionarAsignatura);
+		
+		btnGestionarAlumnos = new JButton("Gestionar Alumnos");
+		btnGestionarAlumnos.setBounds(150, 440, 250, 60);
+		contentPane.add(btnGestionarAlumnos);
+		
+		btnGestionarProfesores = new JButton("Gestionar Profesores");
+		btnGestionarProfesores.setBounds(600, 440, 250, 60);
+		contentPane.add(btnGestionarProfesores);
+		
+		btnGestionarActores = new JButton("Gestionar Actores");
+		btnGestionarActores.setBounds(150, 558, 250, 60);
+		contentPane.add(btnGestionarActores);
+		
+		btnGestionarSalas = new JButton("Gestionar Salas");
+		btnGestionarSalas.setBounds(600, 558, 250, 60);
+		contentPane.add(btnGestionarSalas);
 	}
 }
