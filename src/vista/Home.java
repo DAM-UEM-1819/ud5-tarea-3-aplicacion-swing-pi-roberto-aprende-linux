@@ -80,7 +80,7 @@ public class Home extends JFrame {
 		btnSalir = new JButton("Salir");
 		btnSalir.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				JOptionPane.showConfirmDialog(rootPane, "¿Esta seguro/a de que desea salir?");
+				
 			}
 		});
 		btnSalir.setBounds(35, 685, 120, 40);
@@ -152,6 +152,10 @@ public class Home extends JFrame {
 		lblNombreSimulador.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNombreSimulador.setBounds(85, 161, 85, 166);
 		infoExtra.add(lblNombreSimulador);
+	}
+	
+	public void confirmacionSalir() {
+		JOptionPane.showConfirmDialog(rootPane, "¿Esta seguro/a de que desea salir?");
 	}
 
 }
