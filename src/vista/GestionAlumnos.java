@@ -48,7 +48,7 @@ public class GestionAlumnos extends JFrame {
 	private JLabel lblPerfil;
 	private JScrollPane scrollPaneRegistros;
 	private JButton btnActivoInactivo;
-	private JCheckBox chckbxActivoinactivo;
+	private JCheckBox chckbxActivoInactivo;
 
 	public GestionAlumnos() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -138,10 +138,10 @@ public class GestionAlumnos extends JFrame {
 		lblPerfil.setBounds(760, 0, 224, 100);
 		Header.add(lblPerfil);
 		
-		chckbxActivoinactivo = new JCheckBox("Activo/Inactivo");
-		chckbxActivoinactivo.setHorizontalAlignment(SwingConstants.CENTER);
-		chckbxActivoinactivo.setBounds(679, 602, 200, 23);
-		contentPane.add(chckbxActivoinactivo);
+		chckbxActivoInactivo = new JCheckBox("Activo/Inactivo");
+		chckbxActivoInactivo.setHorizontalAlignment(SwingConstants.CENTER);
+		chckbxActivoInactivo.setBounds(679, 602, 200, 23);
+		contentPane.add(chckbxActivoInactivo);
 	}
 	
 	public void modificarAlumnoAlerta() {
