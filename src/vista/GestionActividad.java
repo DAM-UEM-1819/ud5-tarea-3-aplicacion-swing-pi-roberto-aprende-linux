@@ -20,71 +20,84 @@ import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 import javax.swing.table.DefaultTableModel;
 
-public class GestionAsignatura extends JFrame {
+public class GestionActividad extends JFrame {
 
 	private JPanel contentPane;
-	private JTable tablaAsignaturas;
-	private JTextField txtCodigoAsignatura;
+	private JTable tablaActividad;
 	private JTextField txtNombre;
-	private JTextField txtTitulacion;
-	private JTextField txtCurso;
+	private JTextField txtTipo_actividad;
+	private JTextField txtDocumentacion_tecnica;
+	private JTextField txtHorasActividad;
+	private JTextField txtCod_asignatura;
+	private JTextField txtSimulador;
 	private JPanel HeaderPanel;
 	private JScrollPane scrollPane;
 	private JLabel lblTitulo;
 	private JLabel lblUemLogo;
 	private JLabel lblPerfil;
 	private JButton btnVolver;
-	private JButton btnBorrarAsignatura;
-	private JButton btnAddAsignatura;
-	private JButton btnModificarAsignatura;
+	private JButton btnBorrarActividad;
+	private JButton btnAddActividad;
+	private JButton btnModificarActividad;
 
 
-
-	public GestionAsignatura() {
-		setTitle("Asignatura gesti\u00F3n");
+	 
+	public GestionActividad() {
+		setTitle("Actividad gesti\u00F3n");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1000, 800);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		
+
 		scrollPane = new JScrollPane();
 		scrollPane.setBounds(98, 168, 800, 450);
 		contentPane.add(scrollPane);
 
-		tablaAsignaturas = new JTable();
-		tablaAsignaturas.setModel(new DefaultTableModel(
+		tablaActividad = new JTable();
+		tablaActividad.setModel(new DefaultTableModel(
 			new Object[][] {
-				{"1", "HCC", "Medicina", "Curso"},
-				{null, null, null, null},
+				{"Seg paciente 1", "Taller de habilidades", "2", "2","01411", "ISTAN"},
+				{null, null, null, null, null, null},
 			},
 			new String[] {
-				"Numero", "Nombre", "Titulaci\u00F3n", "4"
+				"Nombre", "Tipo de actividad", "Ficha tecnica", "Horas de actividad", "Codigo de asignatura", "Simulador"
 			}
 		));
-		tablaAsignaturas.setRowHeight(40);
-		scrollPane.setViewportView(tablaAsignaturas);
-
-		txtCodigoAsignatura = new JTextField();
-		txtCodigoAsignatura.setBounds(108, 629, 190, 30);
-		contentPane.add(txtCodigoAsignatura);
-		txtCodigoAsignatura.setColumns(10);
+		tablaActividad.setRowHeight(40);
+		scrollPane.setViewportView(tablaActividad);
 
 		txtNombre = new JTextField();
-		txtNombre.setBounds(308, 630, 190, 30);
+		txtNombre.setBounds(108, 629, 128, 30);
 		contentPane.add(txtNombre);
 		txtNombre.setColumns(10);
 
-		txtTitulacion = new JTextField();
-		txtTitulacion.setBounds(508, 630, 190, 30);
-		contentPane.add(txtTitulacion);
-		txtTitulacion.setColumns(10);
+		txtTipo_actividad = new JTextField();
+		txtTipo_actividad.setBounds(246, 629, 126, 30);
+		contentPane.add(txtTipo_actividad);
+		txtTipo_actividad.setColumns(10);
 
-		txtCurso = new JTextField();
-		txtCurso.setBounds(708, 630, 182, 30);
-		contentPane.add(txtCurso);
-		txtCurso.setColumns(10);
+		txtDocumentacion_tecnica = new JTextField();
+		txtDocumentacion_tecnica.setBounds(382, 629, 128, 30);
+		contentPane.add(txtDocumentacion_tecnica);
+		txtDocumentacion_tecnica.setColumns(10);
+
+		txtHorasActividad = new JTextField();
+		txtHorasActividad.setBounds(520, 629, 114, 30);
+		contentPane.add(txtHorasActividad);
+		txtHorasActividad.setColumns(10);
+
+		txtCod_asignatura = new JTextField();
+		txtCod_asignatura.setBounds(644, 629, 128, 30);
+		contentPane.add(txtCod_asignatura);
+		txtCod_asignatura.setColumns(10);
+
+		txtSimulador = new JTextField();
+		txtSimulador.setColumns(10);
+		txtSimulador.setBounds(780, 629, 107, 30);
+		contentPane.add(txtSimulador);
+		
 
 
 		HeaderPanel = new JPanel();
@@ -93,7 +106,7 @@ public class GestionAsignatura extends JFrame {
 		contentPane.add(HeaderPanel);
 		HeaderPanel.setLayout(null);
 
-		lblTitulo = new JLabel("Asignaturas");
+		lblTitulo = new JLabel("Actividad");
 		lblTitulo.setForeground(Color.WHITE);
 		lblTitulo.setBounds(358, 11, 266, 61);
 		lblTitulo.setFont(new Font("Tahoma", Font.PLAIN, 50));
@@ -115,22 +128,22 @@ public class GestionAsignatura extends JFrame {
 		btnVolver.setBounds(100, 685, 120, 40);
 		contentPane.add(btnVolver);
 
-		btnModificarAsignatura = new JButton("Modificar asignatura");
-		btnModificarAsignatura.addActionListener(new ActionListener() {
+		btnModificarActividad = new JButton("Modificar actividad");
+		btnModificarActividad.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				JOptionPane.showConfirmDialog(rootPane, "¿Desea modificar el profesor seleccionado?" );
 			}
 		});
-		btnModificarAsignatura.setBounds(325, 685, 135, 40);
-		contentPane.add(btnModificarAsignatura);
+		btnModificarActividad.setBounds(325, 685, 128, 40);
+		contentPane.add(btnModificarActividad);
 
-		btnBorrarAsignatura = new JButton("Borrar asignatura");
-		btnBorrarAsignatura.setBounds(575, 685, 120, 40);
-		contentPane.add(btnBorrarAsignatura);
+		btnBorrarActividad = new JButton("Borrar actividad");
+		btnBorrarActividad.setBounds(575, 685, 120, 40);
+		contentPane.add(btnBorrarActividad);
 
-		btnAddAsignatura = new JButton(" A\u00F1adir asignatura");
-		btnAddAsignatura.setBounds(774, 685, 128, 40);
-		contentPane.add(btnAddAsignatura);
+		btnAddActividad = new JButton(" A\u00F1adir actividad");
+		btnAddActividad.setBounds(774, 685, 128, 40);
+		contentPane.add(btnAddActividad);
 		
 	
 	}
