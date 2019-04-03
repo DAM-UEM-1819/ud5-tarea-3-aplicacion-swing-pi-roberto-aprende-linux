@@ -38,6 +38,7 @@ public class Perfil extends JFrame {
 	 * Create the frame.
 	 */
 	public Perfil() {
+		setTitle("Perfil");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1000, 800);
 		contentPane = new JPanel();
@@ -83,7 +84,7 @@ public class Perfil extends JFrame {
 		txtUsuario.setColumns(10);
 		
 		lblUsuario = new JLabel("Usuario");
-		lblUsuario.setFont(new Font("Tahoma", Font.PLAIN, 25));
+		lblUsuario.setFont(new Font("Tahoma", Font.PLAIN, 23));
 		lblUsuario.setForeground(Color.BLACK);
 		lblUsuario.setBounds(194, 181, 91, 54);
 		contentPane.add(lblUsuario);
@@ -95,13 +96,13 @@ public class Perfil extends JFrame {
 		
 		lblPasswordActual = new JLabel("Contrase\u00F1a actual");
 		lblPasswordActual.setForeground(Color.BLACK);
-		lblPasswordActual.setFont(new Font("Tahoma", Font.PLAIN, 25));
+		lblPasswordActual.setFont(new Font("Tahoma", Font.PLAIN, 23));
 		lblPasswordActual.setBounds(584, 181, 198, 54);
 		contentPane.add(lblPasswordActual);
 		
 		lblRolTitulo = new JLabel("Rol");
 		lblRolTitulo.setForeground(Color.BLACK);
-		lblRolTitulo.setFont(new Font("Tahoma", Font.PLAIN, 25));
+		lblRolTitulo.setFont(new Font("Tahoma", Font.PLAIN, 23));
 		lblRolTitulo.setBounds(213, 358, 43, 54);
 		contentPane.add(lblRolTitulo);
 		
@@ -113,7 +114,7 @@ public class Perfil extends JFrame {
 		
 		lblPasswordNueva = new JLabel("Nueva contrase\u00F1a");
 		lblPasswordNueva.setForeground(Color.BLACK);
-		lblPasswordNueva.setFont(new Font("Tahoma", Font.PLAIN, 25));
+		lblPasswordNueva.setFont(new Font("Tahoma", Font.PLAIN, 23));
 		lblPasswordNueva.setBounds(584, 317, 198, 54);
 		contentPane.add(lblPasswordNueva);
 		
@@ -124,7 +125,7 @@ public class Perfil extends JFrame {
 		
 		lblConfirmarContrasea = new JLabel("Confirmar contrase\u00F1a");
 		lblConfirmarContrasea.setForeground(Color.BLACK);
-		lblConfirmarContrasea.setFont(new Font("Tahoma", Font.PLAIN, 25));
+		lblConfirmarContrasea.setFont(new Font("Tahoma", Font.PLAIN, 23));
 		lblConfirmarContrasea.setBounds(544, 445, 238, 54);
 		contentPane.add(lblConfirmarContrasea);
 		

@@ -25,6 +25,7 @@ public class Login extends JFrame {
 	private JLabel lblPasswordTemp;
 	private JPanel FooterPanel;
 	private JLabel lblNewLabel;
+	private JButton btnLogin;
 	
 
 
@@ -32,6 +33,7 @@ public class Login extends JFrame {
 	
 	
 	public Login() {
+		setTitle("Login");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1000, 800);
 		contentPane = new JPanel();
@@ -74,7 +76,7 @@ public class Login extends JFrame {
 		lblPasswordTemp.setBounds(380, 462, 65, 14);
 		contentPane.add(lblPasswordTemp);
 		
-		JButton btnLogin = new JButton("Login");
+		btnLogin = new JButton("Login");
 		btnLogin.setBounds(380, 572, 271, 58);
 		contentPane.add(btnLogin);
 		
