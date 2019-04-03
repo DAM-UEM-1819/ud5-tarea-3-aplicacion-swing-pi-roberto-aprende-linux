@@ -78,17 +78,17 @@ public class GestionProfesores extends JFrame {
 		txtNumero.setColumns(10);
 
 		txtNombre = new JTextField();
-		txtNombre.setBounds(189, 629, 77, 30);
+		txtNombre.setBounds(189, 629, 71, 30);
 		contentPane.add(txtNombre);
 		txtNombre.setColumns(10);
 
 		txtTitulacion = new JTextField();
-		txtTitulacion.setBounds(276, 629, 77, 30);
+		txtTitulacion.setBounds(276, 629, 71, 30);
 		contentPane.add(txtTitulacion);
 		txtTitulacion.setColumns(10);
 
 		txtDni = new JTextField();
-		txtDni.setBounds(363, 629, 64, 30);
+		txtDni.setBounds(363, 629, 71, 30);
 		contentPane.add(txtDni);
 		txtDni.setColumns(10);
 
