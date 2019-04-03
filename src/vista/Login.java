@@ -25,6 +25,7 @@ public class Login extends JFrame {
 	private JLabel lblPasswordTemp;
 	private JPanel FooterPanel;
 	private JLabel lblNewLabel;
+	
 
 
 	

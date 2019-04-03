@@ -63,33 +63,33 @@ public class GestionActores extends JFrame {
 		scrollPane.setViewportView(tablaActores);
 
 		txtCod_actor = new JTextField();
-		txtCod_actor.setBounds(108, 629, 121, 30);
+		txtCod_actor.setBounds(108, 629, 103, 30);
 		contentPane.add(txtCod_actor);
 		txtCod_actor.setColumns(10);
 
 		txtNombre = new JTextField();
-		txtNombre.setBounds(239, 629, 126, 30);
+		txtNombre.setBounds(221, 629, 103, 30);
 		contentPane.add(txtNombre);
 		txtNombre.setColumns(10);
 
 		txtEdad = new JTextField();
-		txtEdad.setBounds(375, 629, 103, 30);
+		txtEdad.setBounds(334, 629, 121, 30);
 		contentPane.add(txtEdad);
 		txtEdad.setColumns(10);
 
 		txtGenero = new JTextField();
-		txtGenero.setBounds(488, 629, 103, 30);
+		txtGenero.setBounds(465, 629, 103, 30);
 		contentPane.add(txtGenero);
 		txtGenero.setColumns(10);
 
 		txtIdioma = new JTextField();
-		txtIdioma.setBounds(601, 629, 108, 30);
+		txtIdioma.setBounds(578, 629, 103, 30);
 		contentPane.add(txtIdioma);
 		txtIdioma.setColumns(10);
 
 		txtComplexion = new JTextField();
 		txtComplexion.setColumns(10);
-		txtComplexion.setBounds(719, 629, 103, 30);
+		txtComplexion.setBounds(691, 629, 103, 30);
 		contentPane.add(txtComplexion);
 
 		HeaderPanel = new JPanel();
