@@ -159,7 +159,7 @@ public class GestionProfesores extends JFrame {
 		contentPane.add(btnAI_profesor);
 
 		btnAddProfesor = new JButton(" A\u00F1adir profesores");
-		btnAddProfesor.setBounds(782, 685, 120, 40);
+		btnAddProfesor.setBounds(774, 685, 128, 40);
 		contentPane.add(btnAddProfesor);
 		
 		chckbxAI_profesores = new JCheckBox(""
