@@ -48,6 +48,7 @@ public class GestionUsuarios extends JFrame {
 	private JScrollPane scrollPaneRegistros;
 
 	public GestionUsuarios() {
+		setTitle("Usuarios gesti\u00F3n");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1000, 800);
 		contentPane = new JPanel();

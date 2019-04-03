@@ -48,6 +48,7 @@ public class Gestion extends JFrame {
 	private JButton btnGestionRegistros;
 
 	public Gestion() {
+		setTitle("Gestion");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1000, 800);
 		contentPane = new JPanel();
