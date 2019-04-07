@@ -19,6 +19,9 @@ import javax.swing.JInternalFrame;
 import javax.swing.JTable;
 import javax.swing.JScrollPane;
 import javax.swing.table.DefaultTableModel;
+
+import controlador.Controlador;
+
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JTextField;
@@ -40,6 +43,7 @@ import javax.swing.SwingConstants;
 
 public class GestionUsuarios extends JFrame {
 
+	private Controlador controlador;
 	private JPanel contentPane;
 	private JTable tablaUsuarios;
 	private JTextField txtUsuario;
@@ -70,15 +74,8 @@ public class GestionUsuarios extends JFrame {
 		contentPane.add(scrollPaneRegistros);
 
 		tablaUsuarios = new JTable();
-		tablaUsuarios.setModel(new DefaultTableModel(
-			new Object[][] {
-				{"Pedro", "Admin"},
-				{null, null},
-			},
-			new String[] {
-				"Usuarios", "Rol"
-			}
-		));
+		tablaUsuarios.setModel(new DefaultTableModel(new Object[][] { { "Pedro", "Admin" }, { null, null }, },
+				new String[] { "Usuarios", "Rol" }));
 		tablaUsuarios.setRowHeight(30);
 		scrollPaneRegistros.setViewportView(tablaUsuarios);
 
@@ -115,51 +112,54 @@ public class GestionUsuarios extends JFrame {
 		});
 		btnAddUsuario.setBounds(782, 685, 120, 40);
 		contentPane.add(btnAddUsuario);
-		
+
 		Header = new JPanel();
 		Header.setBackground(new Color(165, 42, 42));
 		Header.setBounds(0, 0, 984, 100);
 		contentPane.add(Header);
 		Header.setLayout(null);
-		
+
 		lblTitulo = new JLabel("Usuarios");
 		lblTitulo.setForeground(new Color(255, 255, 255));
 		lblTitulo.setHorizontalAlignment(SwingConstants.CENTER);
 		lblTitulo.setBounds(250, 0, 500, 100);
 		lblTitulo.setFont(new Font("Tahoma", Font.PLAIN, 50));
 		Header.add(lblTitulo);
-		
+
 		lblUemLogo = new JLabel("Aqui Iria el logo");
 		lblUemLogo.setHorizontalAlignment(SwingConstants.CENTER);
 		lblUemLogo.setBounds(0, 0, 240, 100);
 		Header.add(lblUemLogo);
-		
+
 		lblPerfil = new JLabel("Aqui Iria el logo");
 		lblPerfil.setHorizontalAlignment(SwingConstants.CENTER);
 		lblPerfil.setBounds(760, 0, 224, 100);
 		Header.add(lblPerfil);
-		
+
 		txtBuscador = new JTextField();
 		txtBuscador.setText("Buscador");
 		txtBuscador.setHorizontalAlignment(SwingConstants.CENTER);
 		txtBuscador.setBounds(663, 114, 86, 20);
 		contentPane.add(txtBuscador);
 		txtBuscador.setColumns(10);
-		
+
 		comboBoxColumna = new JComboBox();
-		comboBoxColumna.setModel(new DefaultComboBoxModel(new String[] {"Columna","Usuarios", "Rol"  }));
+		comboBoxColumna.setModel(new DefaultComboBoxModel(new String[] { "Columna", "Usuarios", "Rol" }));
 		comboBoxColumna.setBounds(759, 114, 104, 20);
 		contentPane.add(comboBoxColumna);
-		
+
 		lblImportarActividades = new JLabel("Importar Usuarios");
-		lblImportarActividades.setIcon(new ImageIcon(GestionActividad.class.getResource("/javax/swing/plaf/basic/icons/JavaCup16.png")));
+		lblImportarActividades.setIcon(
+				new ImageIcon(GestionActividad.class.getResource("/javax/swing/plaf/basic/icons/JavaCup16.png")));
 		lblImportarActividades.setBounds(100, 114, 124, 20);
 		contentPane.add(lblImportarActividades);
 	}
-	
+
+	public void setControlador(Controlador controlador) {
+		this.controlador = controlador;
+	}
+
 	public void borrarUsuarioAlerta() {
 		JOptionPane.showConfirmDialog(rootPane, "¿Desea borrar el usuario seleccionado?");
 	}
 }
-
-

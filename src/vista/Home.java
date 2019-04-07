@@ -16,6 +16,9 @@ import javax.swing.JInternalFrame;
 import javax.swing.JTable;
 import javax.swing.JScrollPane;
 import javax.swing.table.DefaultTableModel;
+
+import controlador.Controlador;
+
 import javax.swing.JButton;
 import javax.swing.JTextField;
 import java.awt.event.ActionListener;
@@ -36,6 +39,7 @@ import javax.swing.ImageIcon;
 
 public class Home extends JFrame {
 
+	private Controlador controlador;
 	private JPanel contentPane;
 	private JTable tablaRegistros;
 	private JButton btnSalir;
@@ -189,6 +193,10 @@ public class Home extends JFrame {
 		txtCalendario.setBounds(859, 111, 70, 20);
 		contentPane.add(txtCalendario);
 		txtCalendario.setColumns(10);
+	}
+	
+	public void setControlador(Controlador controlador) {
+		this.controlador = controlador;
 	}
 	
 	public void confirmacionSalir() {

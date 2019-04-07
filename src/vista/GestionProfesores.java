@@ -18,13 +18,17 @@ import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 import javax.swing.table.DefaultTableModel;
+
+import controlador.Controlador;
+
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
 
 public class GestionProfesores extends JFrame {
-
+	
+	private Controlador controlador;
 	private JPanel contentPane;
 	private JTable tablaProfesores;
 	private JTextField txtNumero;
@@ -189,5 +193,9 @@ public class GestionProfesores extends JFrame {
 		lblImportarActividades.setIcon(new ImageIcon(GestionActividad.class.getResource("/javax/swing/plaf/basic/icons/JavaCup16.png")));
 		lblImportarActividades.setBounds(98, 127, 124, 20);
 		contentPane.add(lblImportarActividades);
+	}
+	
+	public void setControlador(Controlador controlador) {
+		this.controlador = controlador;
 	}
 }

@@ -15,13 +15,17 @@ import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 import javax.swing.table.DefaultTableModel;
+
+import controlador.Controlador;
+
 import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
 import javax.swing.ImageIcon;
 import javax.swing.DefaultComboBoxModel;
 
 public class GestionActores extends JFrame {
-
+	
+	private Controlador controlador;
 	private JPanel contentPane;
 	private JTable tablaActores;
 	private JTextField txtNombre;
@@ -41,6 +45,7 @@ public class GestionActores extends JFrame {
 	private JComboBox comboBoxGenero;
 	private JComboBox comboBoxIdioma;
 	private JComboBox comboBoxComplexion;
+
 
 	/**
 	 * Launch the application.
@@ -152,5 +157,9 @@ public class GestionActores extends JFrame {
 		chckbxActivo.setHorizontalAlignment(SwingConstants.CENTER);
 		chckbxActivo.setBounds(801, 633, 97, 23);
 		contentPane.add(chckbxActivo);
+	}
+	
+	public void setControlador(Controlador controlador) {
+		this.controlador = controlador;
 	}
 }

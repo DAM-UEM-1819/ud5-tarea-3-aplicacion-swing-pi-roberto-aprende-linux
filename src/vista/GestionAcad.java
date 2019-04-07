@@ -15,12 +15,16 @@ import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 import javax.swing.table.DefaultTableModel;
+
+import controlador.Controlador;
+
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.ImageIcon;
 
 public class GestionAcad extends JFrame {
-
+	
+	private Controlador controlador;
 	private JPanel contentPane;
 	private JTable tablaActores;
 	private JPanel HeaderPanel;
@@ -129,5 +133,9 @@ public class GestionAcad extends JFrame {
 		comboBoxColumna = new JComboBox();
 		comboBoxColumna.setBounds(761, 132, 104, 20);
 		contentPane.add(comboBoxColumna);
+	}
+	
+	public void setControlador(Controlador controlador) {
+		this.controlador = controlador;
 	}
 }

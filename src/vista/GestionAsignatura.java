@@ -24,8 +24,11 @@ import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 import javax.swing.table.DefaultTableModel;
 
+import controlador.Controlador;
+
 public class GestionAsignatura extends JFrame {
 
+	private Controlador controlador;
 	private JPanel contentPane;
 	private JTable tablaAsignaturas;
 	private JTextField txtCodigoAsignatura;
@@ -158,6 +161,10 @@ public class GestionAsignatura extends JFrame {
 		contentPane.add(lblImportarActividades);
 		
 	
+	}
+	
+	public void setControlador(Controlador controlador) {
+		this.controlador = controlador;
 	}
 
 }

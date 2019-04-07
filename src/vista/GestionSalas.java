@@ -16,6 +16,9 @@ import javax.swing.JInternalFrame;
 import javax.swing.JTable;
 import javax.swing.JScrollPane;
 import javax.swing.table.DefaultTableModel;
+
+import controlador.Controlador;
+
 import javax.swing.JButton;
 import javax.swing.JTextField;
 import java.awt.event.ActionListener;
@@ -35,6 +38,7 @@ import javax.swing.JCheckBox;
 
 public class GestionSalas extends JFrame {
 
+	private Controlador controlador;
 	private JPanel contentPane;
 	private JTable tablaSalas;
 	private JTextField txtCodigo;
@@ -151,6 +155,9 @@ public class GestionSalas extends JFrame {
 		Header.add(lblPerfil);
 		
 		
+	}
+	public void setControlador(Controlador controlador) {
+		this.controlador = controlador;
 	}
 	
 	public void modificarSalaAlerta() {

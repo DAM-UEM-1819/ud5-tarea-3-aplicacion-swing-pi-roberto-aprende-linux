@@ -19,12 +19,16 @@ import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 import javax.swing.table.DefaultTableModel;
+
+import controlador.Controlador;
+
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.ImageIcon;
 
 public class GestionActividad extends JFrame {
-
+	
+	private Controlador controlador;
 	private JPanel contentPane;
 	private JTable tablaActividad;
 	private JTextField txtNombre;
@@ -46,6 +50,7 @@ public class GestionActividad extends JFrame {
 	private JTextField txtBuscador;
 	private JComboBox comboBoxColumna;
 	private JLabel lblImportarActividades;
+
 
 
 	 
@@ -185,5 +190,10 @@ public class GestionActividad extends JFrame {
 		contentPane.add(lblImportarActividades);
 		
 	
+	}
+	
+	
+	public void setControlador(Controlador controlador) {
+		this.controlador = controlador;
 	}
 }

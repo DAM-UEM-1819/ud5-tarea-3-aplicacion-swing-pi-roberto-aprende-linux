@@ -10,11 +10,15 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
+
+import controlador.Controlador;
+
 import java.awt.TextField;
 import javax.swing.JButton;
 
 public class Login extends JFrame {
 
+	private Controlador controlador;
 	private JPanel contentPane;
 	private JPanel HeaderPanel;
 	private JLabel lblUemLogo;
@@ -91,5 +95,9 @@ public class Login extends JFrame {
 		lblNewLabel.setForeground(Color.WHITE);
 		lblNewLabel.setBounds(400, 11, 201, 31);
 		FooterPanel.add(lblNewLabel);
+	}
+	
+	public void setControlador(Controlador controlador) {
+		this.controlador = controlador;
 	}
 }

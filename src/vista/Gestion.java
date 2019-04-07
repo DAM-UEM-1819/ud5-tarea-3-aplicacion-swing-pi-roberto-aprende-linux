@@ -16,6 +16,9 @@ import javax.swing.JInternalFrame;
 import javax.swing.JTable;
 import javax.swing.JScrollPane;
 import javax.swing.table.DefaultTableModel;
+
+import controlador.Controlador;
+
 import javax.swing.JButton;
 import javax.swing.JTextField;
 import java.awt.event.ActionListener;
@@ -31,7 +34,8 @@ import java.awt.FlowLayout;
 import javax.swing.SwingConstants;
 
 public class Gestion extends JFrame {
-
+	
+	private Controlador controlador;
 	private JPanel contentPane;
 	private JButton btnVolver;
 	private JButton btnGestionUsuarios;
@@ -48,6 +52,7 @@ public class Gestion extends JFrame {
 	private JButton btnGestionRegistros;
 	private JButton btnGestionarAcad;
 	private JButton btnVerGrupos;
+
 
 	public Gestion() {
 		setTitle("Gestion");
@@ -132,5 +137,9 @@ public class Gestion extends JFrame {
 		btnVerGrupos = new JButton("Ver grupos");
 		btnVerGrupos.setBounds(150, 565, 250, 60);
 		contentPane.add(btnVerGrupos);
+	}
+	
+	public void setControlador(Controlador controlador) {
+		this.controlador = controlador;
 	}
 }

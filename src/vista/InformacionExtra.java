@@ -15,10 +15,14 @@ import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 import javax.swing.table.DefaultTableModel;
+
+import controlador.Controlador;
+
 import java.awt.Label;
 
 public class InformacionExtra extends JFrame {
 
+	private Controlador controlador;
 	private JPanel contentPane;
 	private JTable tablaInfoProfesores;
 	private JPanel HeaderPanel;
@@ -114,5 +118,9 @@ public class InformacionExtra extends JFrame {
 		lblAlumnos.setFont(new Font("Dialog", Font.PLAIN, 18));
 		lblAlumnos.setBounds(448, 307, 72, 22);
 		contentPane.add(lblAlumnos);
+	}
+	
+	public void setControlador(Controlador controlador) {
+		this.controlador = controlador;
 	}
 }

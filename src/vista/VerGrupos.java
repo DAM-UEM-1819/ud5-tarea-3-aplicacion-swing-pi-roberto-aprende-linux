@@ -24,8 +24,11 @@ import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 import javax.swing.table.DefaultTableModel;
 
+import controlador.Controlador;
+
 public class VerGrupos extends JFrame {
 
+	private Controlador controlador;
 	private JPanel contentPane;
 	private JPanel HeaderPanel;
 	private JLabel lblTitulo;
@@ -36,8 +39,6 @@ public class VerGrupos extends JFrame {
 	private JTable tablaGrupos;
 	private JScrollPane scrollPane;
 
-
-
 	public VerGrupos() {
 		setTitle("Asignatura gesti\u00F3n");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -46,7 +47,6 @@ public class VerGrupos extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-
 
 		HeaderPanel = new JPanel();
 		HeaderPanel.setBackground(new Color(165, 42, 42));
@@ -79,26 +79,23 @@ public class VerGrupos extends JFrame {
 		});
 		btnVolver.setBounds(419, 685, 120, 40);
 		contentPane.add(btnVolver);
-		
+
 		comboBoxColumna = new JComboBox();
-		comboBoxColumna.setModel(new DefaultComboBoxModel(new String[] {"Seleccionar un grupo"}));
+		comboBoxColumna.setModel(new DefaultComboBoxModel(new String[] { "Seleccionar un grupo" }));
 		comboBoxColumna.setBounds(100, 127, 765, 40);
 		contentPane.add(comboBoxColumna);
-		
+
 		scrollPane = new JScrollPane();
 		scrollPane.setBounds(100, 176, 765, 479);
 		contentPane.add(scrollPane);
-		
+
 		tablaGrupos = new JTable();
-		tablaGrupos.setModel(new DefaultTableModel(
-			new Object[][] {
-			},
-			new String[] {
-				"Nombre y apellido"
-			}
-		));
+		tablaGrupos.setModel(new DefaultTableModel(new Object[][] {}, new String[] { "Nombre y apellido" }));
 		scrollPane.setViewportView(tablaGrupos);
-		
-	
+
+	}
+
+	public void setControlador(Controlador controlador) {
+		this.controlador = controlador;
 	}
 }

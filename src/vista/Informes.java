@@ -15,11 +15,15 @@ import javax.swing.JTable;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 import javax.swing.table.DefaultTableModel;
+
+import controlador.Controlador;
+
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
 
 public class Informes extends JFrame {
 
+	private Controlador controlador;
 	private JPanel contentPane;
 	private JTable tablaInfoProfesores;
 	private JPanel HeaderPanel;
@@ -103,5 +107,8 @@ public class Informes extends JFrame {
 		comboBoxInformes.setModel(new DefaultComboBoxModel(new String[] {"Informe"}));
 		comboBoxInformes.setBounds(352, 689, 301, 33);
 		contentPane.add(comboBoxInformes);
+	}
+	public void setControlador(Controlador controlador) {
+		this.controlador = controlador;
 	}
 }

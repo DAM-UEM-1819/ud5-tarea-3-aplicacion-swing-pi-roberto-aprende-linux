@@ -16,6 +16,9 @@ import javax.swing.JInternalFrame;
 import javax.swing.JTable;
 import javax.swing.JScrollPane;
 import javax.swing.table.DefaultTableModel;
+
+import controlador.Controlador;
+
 import javax.swing.JButton;
 import javax.swing.JTextField;
 import java.awt.event.ActionListener;
@@ -37,7 +40,8 @@ import javax.swing.DefaultComboBoxModel;
 import javax.swing.ImageIcon;
 
 public class GestionAlumnos extends JFrame {
-
+	
+	private Controlador controlador;
 	private JPanel contentPane;
 	private JTable tablaAlumnos;
 	private JTextField txtExpediente;
@@ -55,6 +59,7 @@ public class GestionAlumnos extends JFrame {
 	private JLabel labelImportar;
 	private JTextField txtBuscador;
 	private JComboBox comboBoxColumna;
+
 
 	public GestionAlumnos() {
 		setTitle("Alumnos gesti\u00F3n");
@@ -166,6 +171,10 @@ public class GestionAlumnos extends JFrame {
 		comboBoxColumna.setModel(new DefaultComboBoxModel(new String[] {"Columna", "Expediente", "Nombre y apellido"}));
 		comboBoxColumna.setBounds(763, 111, 104, 20);
 		contentPane.add(comboBoxColumna);
+	}
+	
+	public void setControlador(Controlador controlador) {
+		this.controlador = controlador;
 	}
 	
 	public void modificarAlumnoAlerta() {

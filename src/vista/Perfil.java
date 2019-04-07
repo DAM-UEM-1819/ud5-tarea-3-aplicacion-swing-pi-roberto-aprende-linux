@@ -11,10 +11,14 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
+
+import controlador.Controlador;
+
 import javax.swing.JTextField;
 
 public class Perfil extends JFrame {
 
+	private Controlador controlador;
 	private JPanel contentPane;
 	private JPanel HeaderPanel;
 	private JLabel lblTitulo;
@@ -134,5 +138,9 @@ public class Perfil extends JFrame {
 		txtPasswordConfirmar.setBounds(572, 508, 210, 30);
 		contentPane.add(txtPasswordConfirmar);
 		
+	}
+	
+	public void setControlador(Controlador controlador) {
+		this.controlador = controlador;
 	}
 }

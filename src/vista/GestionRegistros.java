@@ -9,6 +9,9 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JTable;
 import javax.swing.JScrollPane;
 import javax.swing.table.DefaultTableModel;
+
+import controlador.Controlador;
+
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 
@@ -26,7 +29,8 @@ import java.awt.event.ActionEvent;
 import javax.swing.JComboBox;
 
 public class GestionRegistros extends JFrame {
-
+	
+	private Controlador controlador;
 	private JPanel contentPane;
 	private JTable tablaRegistros;
 	private JTextField txtCod_registro;
@@ -149,5 +153,9 @@ public class GestionRegistros extends JFrame {
 		lblImportarActividades.setIcon(new ImageIcon(GestionActividad.class.getResource("/javax/swing/plaf/basic/icons/JavaCup16.png")));
 		lblImportarActividades.setBounds(98, 127, 124, 20);
 		contentPane.add(lblImportarActividades);
+	}
+	
+	public void setControlador(Controlador controlador) {
+		this.controlador = controlador;
 	}
 }
