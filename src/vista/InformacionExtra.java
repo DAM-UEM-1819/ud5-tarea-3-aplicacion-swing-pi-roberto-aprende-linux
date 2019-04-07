@@ -49,9 +49,9 @@ public class InformacionExtra extends JFrame {
 
 		tablaInfoProfesores = new JTable();
 		tablaInfoProfesores.setModel(new DefaultTableModel(
-				new Object[][] { { "1", "Raul", "20", "Hombre", "Bilingue", "Normal", "1" },
+				new Object[][] { { "1", "431567Z", "Marta Laborda", "Medicina", "Mlaborda@gmail.com", "666111222"},
 						{ null, null, null, null, null, null, null }, },
-				new String[] { "Codigo Actor", "Nombre", "Edad", "Genero", "Idioma", "Complexion", "Activo" }));
+				new String[] { "Numero", "DNI", "Nombre y apellidos", "Titulación", "Mail", "Telefono"}));
 		tablaInfoProfesores.setRowHeight(40);
 		scrollPane.setViewportView(tablaInfoProfesores);
 		//
@@ -81,7 +81,7 @@ public class InformacionExtra extends JFrame {
 
 		lblTitulo = new JLabel("Información extra");
 		lblTitulo.setForeground(Color.WHITE);
-		lblTitulo.setBounds(259, 11, 404, 61);
+		lblTitulo.setBounds(268, 11, 404, 61);
 		lblTitulo.setFont(new Font("Tahoma", Font.PLAIN, 50));
 		HeaderPanel.add(lblTitulo);
 		lblTitulo.setHorizontalAlignment(JLabel.CENTER);
