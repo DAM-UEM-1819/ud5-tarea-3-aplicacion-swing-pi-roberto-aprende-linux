@@ -17,6 +17,7 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
+import javax.swing.ImageIcon;
 
 public class GestionAcad extends JFrame {
 
@@ -31,6 +32,11 @@ public class GestionAcad extends JFrame {
 	private JButton btnAI_actor;
 	private JButton btnAddActor;
 	private JButton btnModificarActor;
+	private JTextField txtBuscador;
+	private JComboBox comboBoxSem2;
+	private JComboBox comboBoxSem1;
+	private JLabel label;
+	private JComboBox comboBoxColumna;
 
 
 
@@ -47,7 +53,7 @@ public class GestionAcad extends JFrame {
 		contentPane.setLayout(null);
 
 		scrollPane = new JScrollPane();
-		scrollPane.setBounds(98, 168, 800, 450);
+		scrollPane.setBounds(98, 168, 800, 411);
 		contentPane.add(scrollPane);
 
 		tablaActores = new JTable();
@@ -98,14 +104,30 @@ public class GestionAcad extends JFrame {
 		btnAddActor.setBounds(782, 685, 120, 40);
 		contentPane.add(btnAddActor);
 		
-		JComboBox comboBoxSem1 = new JComboBox();
+		comboBoxSem1 = new JComboBox();
 		comboBoxSem1.setModel(new DefaultComboBoxModel(new String[] {"09/01/2018"}));
-		comboBoxSem1.setBounds(383, 629, 255, 40);
+		comboBoxSem1.setBounds(380, 610, 255, 40);
 		contentPane.add(comboBoxSem1);
 		
-		JComboBox comboBox = new JComboBox();
-		comboBox.setModel(new DefaultComboBoxModel(new String[] {"02/01/2019"}));
-		comboBox.setBounds(657, 629, 241, 40);
-		contentPane.add(comboBox);
+		comboBoxSem2 = new JComboBox();
+		comboBoxSem2.setModel(new DefaultComboBoxModel(new String[] {"02/01/2019"}));
+		comboBoxSem2.setBounds(657, 610, 241, 40);
+		contentPane.add(comboBoxSem2);
+		
+		label = new JLabel("Importar Actividades");
+		label.setIcon(new ImageIcon(GestionAcad.class.getResource("/javax/swing/plaf/basic/icons/JavaCup16.png")));
+		label.setBounds(98, 132, 124, 20);
+		contentPane.add(label);
+		
+		txtBuscador = new JTextField();
+		txtBuscador.setText("Buscador");
+		txtBuscador.setHorizontalAlignment(SwingConstants.CENTER);
+		txtBuscador.setColumns(10);
+		txtBuscador.setBounds(665, 132, 86, 20);
+		contentPane.add(txtBuscador);
+		
+		comboBoxColumna = new JComboBox();
+		comboBoxColumna.setBounds(761, 132, 104, 20);
+		contentPane.add(comboBoxColumna);
 	}
 }
