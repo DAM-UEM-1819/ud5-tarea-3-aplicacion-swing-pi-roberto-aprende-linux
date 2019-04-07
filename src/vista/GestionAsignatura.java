@@ -7,8 +7,11 @@ import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.ComboBoxEditor;
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
+import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -37,6 +40,8 @@ public class GestionAsignatura extends JFrame {
 	private JButton btnBorrarAsignatura;
 	private JButton btnAddAsignatura;
 	private JButton btnModificarAsignatura;
+	private JTextField txtBuscador;
+	private JComboBox comboBoxColumna;
 
 
 
@@ -131,6 +136,19 @@ public class GestionAsignatura extends JFrame {
 		btnAddAsignatura = new JButton(" A\u00F1adir asignatura");
 		btnAddAsignatura.setBounds(774, 685, 128, 40);
 		contentPane.add(btnAddAsignatura);
+		
+
+		txtBuscador.setText("Buscador");
+		txtBuscador.setHorizontalAlignment(SwingConstants.CENTER);
+		txtBuscador.setBounds(665, 127, 86, 20);
+		contentPane.add(txtBuscador);
+		txtBuscador.setColumns(10);
+		
+	
+		comboBoxColumna = new JComboBox();
+		comboBoxColumna.setModel(new DefaultComboBoxModel(new String[] {"Columna", "Nombre", "Tipo de actividad", "Tipo de sala", "Simulador", "Documentaci\u00F3n", "Horas de actividad", "A\u00F1o acad\u00E9mico"}));
+		comboBoxColumna.setBounds(761, 127, 104, 20);
+		contentPane.add(comboBoxColumna);
 		
 	
 	}
