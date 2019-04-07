@@ -6,9 +6,9 @@ public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		//Creamos el controlador
-		Controlador controlador = new  Controlador();
-		//Creamos las vistas
+		// Creamos el controlador
+		Controlador controlador = new Controlador();
+		// Creamos las vistas
 		Login login = new Login();
 		Home home = new Home();
 		InformacionExtra infoExtra = new InformacionExtra();
@@ -27,13 +27,26 @@ public class Main {
 		Perfil perfil = new Perfil();
 		VerGrupos verGrupos = new VerGrupos();
 		//
-		
-		//Asignamos el controlador a las vistas
-		
-		
-		
-		
-		//Asignamos las vistas al controlador
+
+		// Asignamos el controlador a las vistas
+		controlador.setLogin(login);
+		controlador.setHome(home);
+		controlador.setInfoExtra(infoExtra);
+		controlador.setInformes(informes);
+		controlador.setCrearUsuario(crearUser);
+		controlador.setGestion(gestion);
+		controlador.setGestionActividad(gestionActividad);
+		controlador.setGestionActores(gestionActores);
+		controlador.setGestionAlumnos(gestionAlumnos);
+		controlador.setGestionRegistros(gestionRegistros);
+		controlador.setGestionAsignatura(gestionAsignaturas);
+		controlador.setGestionProfesores(gestionProfesores);
+		controlador.setGestionSalas(gestionSalas);
+		controlador.setGestionUsuarios(gestionUsuarios);
+		controlador.setPerfil(perfil);
+		controlador.setVerGrupos(verGrupos);
+
+		// Asignamos las vistas al controlador
 		login.setControlador(controlador);
 		home.setControlador(controlador);
 		infoExtra.setControlador(controlador);
@@ -52,27 +65,16 @@ public class Main {
 		perfil.setControlador(controlador);
 		verGrupos.setControlador(controlador);
 
-
-		
-		
-		
-		//Vista de nuestro login
+		// Vista de nuestro login
 		login.setVisible(true);
-		
-		//Creariamos el modelo que le pasa la vista de login como parámetro
-		
-		
-		 //Asignariamos el modelo a las vistas
-		
-		
-		 //Asignariamos el modelo al controlador
-		
-		
-		 //Asignariamos las vistas al modelo
-		
-		
-		
-		
+
+		// Creariamos el modelo que le pasa la vista de login como parámetro
+
+		// Asignariamos el modelo a las vistas
+
+		// Asignariamos el modelo al controlador
+
+		// Asignariamos las vistas al modelo
 
 	}
 
