@@ -80,9 +80,9 @@ public class CrearUsuario extends JFrame {
 		txtUsuario.setColumns(10);
 		
 		lblUsuario = new JLabel("Usuario");
-		lblUsuario.setFont(new Font("Tahoma", Font.PLAIN, 23));
+		lblUsuario.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		lblUsuario.setForeground(Color.BLACK);
-		lblUsuario.setBounds(466, 174, 91, 54);
+		lblUsuario.setBounds(481, 174, 62, 54);
 		contentPane.add(lblUsuario);
 		
 		txtPasswordCrearUsuario = new JTextField();
@@ -92,8 +92,8 @@ public class CrearUsuario extends JFrame {
 		
 		lblPasswordCreaUsuario = new JLabel("Contrase\u00F1a");
 		lblPasswordCreaUsuario.setForeground(Color.BLACK);
-		lblPasswordCreaUsuario.setFont(new Font("Tahoma", Font.PLAIN, 23));
-		lblPasswordCreaUsuario.setBounds(452, 475, 120, 54);
+		lblPasswordCreaUsuario.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		lblPasswordCreaUsuario.setBounds(467, 475, 91, 54);
 		contentPane.add(lblPasswordCreaUsuario);
 		
 		comboBoxRol = new JComboBox();
@@ -103,8 +103,8 @@ public class CrearUsuario extends JFrame {
 		
 		lblRol = new JLabel("Rol");
 		lblRol.setForeground(Color.BLACK);
-		lblRol.setFont(new Font("Tahoma", Font.PLAIN, 23));
-		lblRol.setBounds(493, 317, 40, 54);
+		lblRol.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		lblRol.setBounds(493, 317, 35, 54);
 		contentPane.add(lblRol);
 		
 	}
