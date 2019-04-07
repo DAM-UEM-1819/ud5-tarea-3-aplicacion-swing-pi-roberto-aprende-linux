@@ -23,6 +23,8 @@ import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JTextField;
 import java.awt.event.ActionListener;
+import java.util.Arrays;
+import java.util.List;
 import java.awt.event.ActionEvent;
 import java.awt.Canvas;
 import java.awt.Color;
@@ -68,7 +70,15 @@ public class GestionUsuarios extends JFrame {
 		contentPane.add(scrollPaneRegistros);
 
 		tablaUsuarios = new JTable();
-		tablaUsuarios.setModel(new DefaultTableModel(new Object[][] {}, new String[] { "Usuarios", "Rol" }));
+		tablaUsuarios.setModel(new DefaultTableModel(
+			new Object[][] {
+				{"Pedro", "Admin"},
+				{null, null},
+			},
+			new String[] {
+				"Usuarios", "Rol"
+			}
+		));
 		tablaUsuarios.setRowHeight(30);
 		scrollPaneRegistros.setViewportView(tablaUsuarios);
 
@@ -151,3 +161,5 @@ public class GestionUsuarios extends JFrame {
 		JOptionPane.showConfirmDialog(rootPane, "¿Desea borrar el usuario seleccionado?");
 	}
 }
+
+
