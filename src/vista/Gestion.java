@@ -46,6 +46,8 @@ public class Gestion extends JFrame {
 	private JButton btnGestionarProfesores;
 	private JButton btnGestionarAlumnos;
 	private JButton btnGestionRegistros;
+	private JButton btnGestionarAcad;
+	private JButton btnVerGrupos;
 
 	public Gestion() {
 		setTitle("Gestion");
@@ -92,35 +94,43 @@ public class Gestion extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 			}
 		});
-		btnGestionUsuarios.setBounds(150, 180, 250, 60);
+		btnGestionUsuarios.setBounds(150, 165, 250, 60);
 		contentPane.add(btnGestionUsuarios);
 		
 		btnGestionRegistros = new JButton("Gestionar Registros");
-		btnGestionRegistros.setBounds(600, 180, 250, 60);
+		btnGestionRegistros.setBounds(600, 165, 250, 60);
 		contentPane.add(btnGestionRegistros);
 		
 		btnGestionarActividades = new JButton("Gestionar Actividades");
-		btnGestionarActividades.setBounds(150, 300, 250, 60);
+		btnGestionarActividades.setBounds(150, 265, 250, 60);
 		contentPane.add(btnGestionarActividades);
 		
 		btnGestionarAsignatura = new JButton("Gestionar Asignatura");
-		btnGestionarAsignatura.setBounds(600, 300, 250, 60);
+		btnGestionarAsignatura.setBounds(600, 265, 250, 60);
 		contentPane.add(btnGestionarAsignatura);
 		
 		btnGestionarAlumnos = new JButton("Gestionar Alumnos");
-		btnGestionarAlumnos.setBounds(150, 420, 250, 60);
+		btnGestionarAlumnos.setBounds(150, 365, 250, 60);
 		contentPane.add(btnGestionarAlumnos);
 		
 		btnGestionarProfesores = new JButton("Gestionar Profesores");
-		btnGestionarProfesores.setBounds(600, 420, 250, 60);
+		btnGestionarProfesores.setBounds(600, 365, 250, 60);
 		contentPane.add(btnGestionarProfesores);
 		
 		btnGestionarActores = new JButton("Gestionar Actores");
-		btnGestionarActores.setBounds(150, 540, 250, 60);
+		btnGestionarActores.setBounds(150, 465, 250, 60);
 		contentPane.add(btnGestionarActores);
 		
 		btnGestionarSalas = new JButton("Gestionar Salas");
-		btnGestionarSalas.setBounds(600, 540, 250, 60);
+		btnGestionarSalas.setBounds(600, 465, 250, 60);
 		contentPane.add(btnGestionarSalas);
+		
+		btnGestionarAcad = new JButton("Gestionar A\u00F1o Acad\u00E9mico");
+		btnGestionarAcad.setBounds(600, 565, 250, 60);
+		contentPane.add(btnGestionarAcad);
+		
+		btnVerGrupos = new JButton("Ver grupos");
+		btnVerGrupos.setBounds(150, 565, 250, 60);
+		contentPane.add(btnVerGrupos);
 	}
 }
