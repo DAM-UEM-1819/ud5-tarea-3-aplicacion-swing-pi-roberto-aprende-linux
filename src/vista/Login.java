@@ -15,6 +15,8 @@ import controlador.Controlador;
 
 import java.awt.TextField;
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class Login extends JFrame {
 
@@ -81,6 +83,15 @@ public class Login extends JFrame {
 		contentPane.add(lblPasswordTemp);
 		
 		btnLogin = new JButton("Login");
+		btnLogin.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				/*
+				 * Más adelante habra que cambiarlo de sitio porque aqui se llamará al 
+				 * controlador que llamara al modelo pasandole los datos para verificar credenciales
+				 */
+				controlador.loginToHome();
+			}
+		});
 		btnLogin.setBounds(380, 572, 271, 58);
 		contentPane.add(btnLogin);
 		

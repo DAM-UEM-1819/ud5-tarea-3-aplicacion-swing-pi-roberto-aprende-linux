@@ -19,7 +19,7 @@ public class Controlador implements IControlador {
 	private GestionAlumnos gestionAlumnos;
 	private GestionRegistros gestionRegistros;
 	private GestionAsignatura gestionAsignatura;
-	private GestionAlumnos gestionProfesores;
+	private GestionProfesores gestionProfesores;
 	private GestionSalas gestionSalas;
 	private VerGrupos verGrupos;
 	private Perfil perfil;
@@ -329,7 +329,7 @@ public class Controlador implements IControlador {
 		this.gestionAsignatura = gestionAsignatura;
 	}
 
-	public void setGestionProfesores(GestionAlumnos gestionProfesores) {
+	public void setGestionProfesores(GestionProfesores gestionProfesores) {
 		this.gestionProfesores = gestionProfesores;
 	}
 
