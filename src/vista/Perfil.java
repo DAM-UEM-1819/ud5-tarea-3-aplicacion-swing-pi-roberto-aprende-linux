@@ -15,6 +15,8 @@ import javax.swing.border.EmptyBorder;
 import controlador.Controlador;
 
 import javax.swing.JTextField;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class Perfil extends JFrame {
 
@@ -74,6 +76,11 @@ public class Perfil extends JFrame {
 		HeaderPanel.add(lblPerfil);
 		
 		btnVolver = new JButton("Volver");
+		btnVolver.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				controlador.perfilToHome();
+			}
+		});
 		btnVolver.setBounds(100, 685, 120, 40);
 		contentPane.add(btnVolver);
 

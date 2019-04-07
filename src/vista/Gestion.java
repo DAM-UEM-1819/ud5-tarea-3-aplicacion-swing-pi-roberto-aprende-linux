@@ -66,6 +66,7 @@ public class Gestion extends JFrame {
 		btnVolver = new JButton("Volver");
 		btnVolver.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				controlador.gestionToHome();
 			}
 		});
 		
@@ -97,44 +98,90 @@ public class Gestion extends JFrame {
 		btnGestionUsuarios = new JButton("Gestionar Usuarios");
 		btnGestionUsuarios.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				controlador.gestionToGestionarUsuarios();
 			}
 		});
 		btnGestionUsuarios.setBounds(150, 165, 250, 60);
 		contentPane.add(btnGestionUsuarios);
 		
 		btnGestionRegistros = new JButton("Gestionar Registros");
+		btnGestionRegistros.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				controlador.gestionToGestionarRegistros();
+			}
+		});
 		btnGestionRegistros.setBounds(600, 165, 250, 60);
 		contentPane.add(btnGestionRegistros);
 		
 		btnGestionarActividades = new JButton("Gestionar Actividades");
+		btnGestionarActividades.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				controlador.gestionToGestionarActividades();
+			}
+		});
 		btnGestionarActividades.setBounds(150, 265, 250, 60);
 		contentPane.add(btnGestionarActividades);
 		
 		btnGestionarAsignatura = new JButton("Gestionar Asignatura");
+		btnGestionarAsignatura.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				controlador.gestionToGestionarAsignatura();
+			}
+		});
 		btnGestionarAsignatura.setBounds(600, 265, 250, 60);
 		contentPane.add(btnGestionarAsignatura);
 		
 		btnGestionarAlumnos = new JButton("Gestionar Alumnos");
+		btnGestionarAlumnos.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				controlador.gestionToGestionarAlumnos();
+			}
+		});
 		btnGestionarAlumnos.setBounds(150, 365, 250, 60);
 		contentPane.add(btnGestionarAlumnos);
 		
 		btnGestionarProfesores = new JButton("Gestionar Profesores");
+		btnGestionarProfesores.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				controlador.gestionToGestionarProfesores();
+			}
+		});
 		btnGestionarProfesores.setBounds(600, 365, 250, 60);
 		contentPane.add(btnGestionarProfesores);
 		
 		btnGestionarActores = new JButton("Gestionar Actores");
+		btnGestionarActores.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				controlador.gestionToGestionarActores();
+			}
+		});
 		btnGestionarActores.setBounds(150, 465, 250, 60);
 		contentPane.add(btnGestionarActores);
 		
 		btnGestionarSalas = new JButton("Gestionar Salas");
+		btnGestionarSalas.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				controlador.gestionToGestionarSalas();
+			}
+		});
 		btnGestionarSalas.setBounds(600, 465, 250, 60);
 		contentPane.add(btnGestionarSalas);
 		
 		btnGestionarAcad = new JButton("Gestionar A\u00F1o Acad\u00E9mico");
+		btnGestionarAcad.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				controlador.gestionToGestionarAcad();
+			}
+		});
 		btnGestionarAcad.setBounds(600, 565, 250, 60);
 		contentPane.add(btnGestionarAcad);
 		
 		btnVerGrupos = new JButton("Ver grupos");
+		btnVerGrupos.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				controlador.gestionToVerGrupos();
+			}
+		});
 		btnVerGrupos.setBounds(150, 565, 250, 60);
 		contentPane.add(btnVerGrupos);
 	}

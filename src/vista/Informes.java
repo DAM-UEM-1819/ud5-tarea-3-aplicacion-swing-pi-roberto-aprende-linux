@@ -20,6 +20,8 @@ import controlador.Controlador;
 
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class Informes extends JFrame {
 
@@ -91,6 +93,11 @@ public class Informes extends JFrame {
 		HeaderPanel.add(lblPerfil);
 
 		btnVolver = new JButton("Volver");
+		btnVolver.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				controlador.informesToHome();
+			}
+		});
 		btnVolver.setBounds(100, 685, 120, 40);
 		contentPane.add(btnVolver);
 

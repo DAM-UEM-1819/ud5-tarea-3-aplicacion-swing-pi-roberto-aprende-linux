@@ -14,6 +14,7 @@ public interface IControlador {
 	public void homeToGestion();
 	public void homeToOcupaciones();
 	public void homeToPerfil();
+	public void confirmacionSalir();
 	
 	//Gestion
 	public void gestionToPerfil();
