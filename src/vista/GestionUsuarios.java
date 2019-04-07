@@ -92,6 +92,7 @@ public class GestionUsuarios extends JFrame {
 		btnVolver = new JButton("Volver");
 		btnVolver.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				controlador.gestionUsuariosToGestion();
 			}
 		});
 		btnVolver.setBounds(100, 685, 120, 40);
