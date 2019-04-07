@@ -8,6 +8,8 @@ public class Main {
 		// TODO Auto-generated method stub
 		// Creamos el controlador
 		Controlador controlador = new Controlador();
+		//Creariamos el modelo
+		
 		// Creamos las vistas
 		Login login = new Login();
 		Home home = new Home();

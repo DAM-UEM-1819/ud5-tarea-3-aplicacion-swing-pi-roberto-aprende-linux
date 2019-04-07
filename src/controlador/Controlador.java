@@ -9,7 +9,7 @@ public class Controlador implements IControlador {
 	private Home home;
 	private Gestion gestion;
 	private Informes informes;
-	//private Ocupaciones ocupaciones;
+//	private Ocupaciones ocupaciones;
 	private InformacionExtra infoExtra;
 	private CrearUsuario crearUsuario;
 	private GestionUsuarios gestionUsuarios;
@@ -36,10 +36,6 @@ public class Controlador implements IControlador {
 		login.setVisible(true);
 
 	}
-	
-	public void confirmacionSalir() {
-		home.confirmacionSalir();
-	}
 
 	public void homeToInfoExtra() {
 		home.setVisible(false);
@@ -58,7 +54,7 @@ public class Controlador implements IControlador {
 
 	public void homeToOcupaciones() {
 		home.setVisible(false);
-		//ocupaciones.setVisible(true);
+//		ocupaciones.setVisible(true);
 	}
 
 	public void homeToPerfil() {
@@ -67,7 +63,7 @@ public class Controlador implements IControlador {
 	}
 
 	public void ocupacionesToHome() {
-		//ocupaciones.setVisible(false);
+//		ocupaciones.setVisible(false);
 		home.setVisible(true);
 	}
 
@@ -349,6 +345,10 @@ public class Controlador implements IControlador {
 		this.perfil = perfil;
 	}
 
-
+	@Override
+	public void confirmacionSalir() {
+		// TODO Auto-generated method stub
+		
+	}
 
 }
