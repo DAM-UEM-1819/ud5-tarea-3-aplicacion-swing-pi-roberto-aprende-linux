@@ -209,7 +209,7 @@ public class Home extends JFrame {
 		contentPane.add(lblOcupaciones);
 
 		lblNewLabel = new JLabel("Selecionar d\u00EDa");
-		lblNewLabel.setBounds(782, 110, 84, 23);
+		lblNewLabel.setBounds(765, 111, 84, 23);
 		contentPane.add(lblNewLabel);
 
 		txtCalendario = new JTextField();
