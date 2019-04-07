@@ -100,6 +100,7 @@ public class Home extends JFrame {
 		btnInfoExtra = new JButton("Informaci\u00F3n Extra");
 		btnInfoExtra.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				controlador.homeToInfoExtra();
 			}
 		});
 		btnInfoExtra.setBounds(251, 685, 144, 40);
@@ -108,6 +109,7 @@ public class Home extends JFrame {
 		btnGestionar = new JButton("Gestionar");
 		btnGestionar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				controlador.homeToGestion();
 			}
 		});
 		btnGestionar.setBounds(782, 685, 170, 40);
@@ -175,6 +177,7 @@ public class Home extends JFrame {
 		btnInformes = new JButton("Informes");
 		btnInformes.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				controlador.homeToInformes();
 			}
 		});
 		btnInformes.setBounds(518, 685, 144, 40);
