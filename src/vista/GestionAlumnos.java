@@ -34,6 +34,7 @@ import javax.swing.SwingConstants;
 import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
+import javax.swing.ImageIcon;
 
 public class GestionAlumnos extends JFrame {
 
@@ -150,6 +151,7 @@ public class GestionAlumnos extends JFrame {
 		contentPane.add(chckbxActivoInactivo);
 		
 		labelImportar = new JLabel("Importar Actividades");
+		labelImportar.setIcon(new ImageIcon(GestionAlumnos.class.getResource("/javax/swing/plaf/basic/icons/JavaCup16.png")));
 		labelImportar.setBounds(100, 111, 124, 20);
 		contentPane.add(labelImportar);
 		
