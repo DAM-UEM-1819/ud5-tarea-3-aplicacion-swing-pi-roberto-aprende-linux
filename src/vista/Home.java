@@ -36,6 +36,8 @@ import java.awt.FlowLayout;
 import javax.swing.SwingConstants;
 import javax.swing.JCheckBox;
 import javax.swing.ImageIcon;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class Home extends JFrame {
 
@@ -134,6 +136,12 @@ public class Home extends JFrame {
 		Header.add(lblUemLogo);
 
 		lblPerfil = new JLabel("Aqui Iria el logo");
+		lblPerfil.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				controlador.homeToPerfil();
+			}
+		});
 		lblPerfil.setHorizontalAlignment(SwingConstants.CENTER);
 		lblPerfil.setBounds(760, 0, 224, 100);
 		Header.add(lblPerfil);
@@ -184,6 +192,12 @@ public class Home extends JFrame {
 		contentPane.add(btnInformes);
 		
 		lblOcupaciones = new JLabel("Ocupaciones");
+		lblOcupaciones.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				controlador.homeToOcupaciones();
+			}
+		});
 		lblOcupaciones.setIcon(new ImageIcon(Home.class.getResource("/javax/swing/plaf/basic/icons/JavaCup16.png")));
 		lblOcupaciones.setBounds(35, 110, 93, 23);
 		contentPane.add(lblOcupaciones);
