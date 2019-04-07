@@ -56,9 +56,9 @@ public class GestionAcad extends JFrame {
 
 		tablaActores = new JTable();
 		tablaActores.setModel(new DefaultTableModel(
-				new Object[][] { { "1", "Raul", "20", "Hombre", "Bilingue", "Normal", "1" },
+				new Object[][] { { "19/19","00/00/0000" , "00/00/0000" },
 						{ null, null, null, null, null, null, null }, },
-				new String[] { "Codigo Actor", "Nombre", "Edad", "Genero", "Idioma", "Complexion", "Activo" }));
+				new String[] { "Año academico" , "semestre1" , "semestre2" }));
 		tablaActores.setRowHeight(40);
 		scrollPane.setViewportView(tablaActores);
 
