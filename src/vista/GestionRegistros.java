@@ -19,6 +19,7 @@ import java.awt.Font;
 import java.awt.Toolkit;
 import javax.swing.JLabel;
 import javax.swing.DefaultComboBoxModel;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -43,6 +44,7 @@ public class GestionRegistros extends JFrame {
 	private JButton btnAddRegistro;
 	private JTextField txtBuscador;
 	private JComboBox comboBoxColumna;
+	private JLabel lblImportarActividades;
 
 	/**
 	 * Create the frame.
@@ -131,15 +133,21 @@ public class GestionRegistros extends JFrame {
 		contentPane.add(btnAddRegistro);
 		
 		
-
+		txtBuscador = new JTextField();
 		txtBuscador.setText("Buscador");
 		txtBuscador.setHorizontalAlignment(SwingConstants.CENTER);
 		txtBuscador.setBounds(665, 127, 86, 20);
 		contentPane.add(txtBuscador);
 		txtBuscador.setColumns(10);
 		
-		comboBoxColumna.setModel(new DefaultComboBoxModel(new String[] {"Columna", "Codigo Registro", "Fecha", "Hora", "Hora Profesor", "Actividad nombre" }));
+		comboBoxColumna = new JComboBox();
+		comboBoxColumna.setModel(new DefaultComboBoxModel(new String[] {"Columna","Codigo Registro", "Fecha", "Hora", "Hora Profesor", "Actividad nombre" }));
 		comboBoxColumna.setBounds(761, 127, 104, 20);
 		contentPane.add(comboBoxColumna);
+		
+		lblImportarActividades = new JLabel("Importar Actividades");
+		lblImportarActividades.setIcon(new ImageIcon(GestionActividad.class.getResource("/javax/swing/plaf/basic/icons/JavaCup16.png")));
+		lblImportarActividades.setBounds(98, 127, 124, 20);
+		contentPane.add(lblImportarActividades);
 	}
 }
