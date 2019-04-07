@@ -32,6 +32,8 @@ import java.awt.Font;
 import java.awt.FlowLayout;
 import javax.swing.SwingConstants;
 import javax.swing.JCheckBox;
+import javax.swing.JComboBox;
+import javax.swing.DefaultComboBoxModel;
 
 public class GestionAlumnos extends JFrame {
 
@@ -49,6 +51,9 @@ public class GestionAlumnos extends JFrame {
 	private JScrollPane scrollPaneRegistros;
 	private JButton btnActivoInactivo;
 	private JCheckBox chckbxActivoInactivo;
+	private JLabel labelImportar;
+	private JTextField txtBuscador;
+	private JComboBox comboBoxColumna;
 
 	public GestionAlumnos() {
 		setTitle("Alumnos gesti\u00F3n");
@@ -80,7 +85,7 @@ public class GestionAlumnos extends JFrame {
 		txtExpediente.setColumns(10);
 
 		txtNombre = new JTextField();
-		txtNombre.setBounds(416, 600, 200, 30);
+		txtNombre.setBounds(407, 600, 200, 30);
 		contentPane.add(txtNombre);
 		txtNombre.setColumns(10);
 
@@ -143,6 +148,22 @@ public class GestionAlumnos extends JFrame {
 		chckbxActivoInactivo.setHorizontalAlignment(SwingConstants.CENTER);
 		chckbxActivoInactivo.setBounds(679, 602, 200, 23);
 		contentPane.add(chckbxActivoInactivo);
+		
+		labelImportar = new JLabel("Importar Actividades");
+		labelImportar.setBounds(100, 111, 124, 20);
+		contentPane.add(labelImportar);
+		
+		txtBuscador = new JTextField();
+		txtBuscador.setText("Buscador");
+		txtBuscador.setHorizontalAlignment(SwingConstants.CENTER);
+		txtBuscador.setColumns(10);
+		txtBuscador.setBounds(667, 111, 86, 20);
+		contentPane.add(txtBuscador);
+		
+		comboBoxColumna = new JComboBox();
+		comboBoxColumna.setModel(new DefaultComboBoxModel(new String[] {"Columna", "Expediente", "Nombre y apellido"}));
+		comboBoxColumna.setBounds(763, 111, 104, 20);
+		contentPane.add(comboBoxColumna);
 	}
 	
 	public void modificarAlumnoAlerta() {

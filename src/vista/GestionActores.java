@@ -36,7 +36,7 @@ public class GestionActores extends JFrame {
 	private JButton btnModificarActor;
 	private JComboBox comboBoxColumna;
 	private JTextField textField;
-	private JLabel label;
+	private JLabel labelImportar;
 	private JComboBox comboBoxEdad;
 	private JComboBox comboBoxGenero;
 	private JComboBox comboBoxIdioma;
@@ -123,10 +123,10 @@ public class GestionActores extends JFrame {
 		textField.setBounds(665, 127, 86, 20);
 		contentPane.add(textField);
 		
-		label = new JLabel("Importar Actividades");
-		label.setIcon(new ImageIcon(GestionActores.class.getResource("/javax/swing/plaf/basic/icons/JavaCup16.png")));
-		label.setBounds(98, 127, 124, 20);
-		contentPane.add(label);
+		labelImportar = new JLabel("Importar Actividades");
+		labelImportar.setIcon(new ImageIcon(GestionActores.class.getResource("/javax/swing/plaf/basic/icons/JavaCup16.png")));
+		labelImportar.setBounds(98, 127, 124, 20);
+		contentPane.add(labelImportar);
 		
 		comboBoxEdad = new JComboBox();
 		comboBoxEdad.setModel(new DefaultComboBoxModel(new String[] {"Edad"}));
