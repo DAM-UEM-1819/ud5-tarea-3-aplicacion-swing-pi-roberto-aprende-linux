@@ -35,6 +35,7 @@ public class Main {
 		controlador.setInformes(informes);
 		controlador.setCrearUsuario(crearUser);
 		controlador.setGestion(gestion);
+		controlador.setGestionAcad(gestionAcad);
 		controlador.setGestionActividad(gestionActividad);
 		controlador.setGestionActores(gestionActores);
 		controlador.setGestionAlumnos(gestionAlumnos);

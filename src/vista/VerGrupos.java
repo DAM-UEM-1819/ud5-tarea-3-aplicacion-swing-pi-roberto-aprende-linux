@@ -54,7 +54,7 @@ public class VerGrupos extends JFrame {
 		contentPane.add(HeaderPanel);
 		HeaderPanel.setLayout(null);
 
-		lblTitulo = new JLabel("Asignaturas");
+		lblTitulo = new JLabel("Grupos");
 		lblTitulo.setForeground(Color.WHITE);
 		lblTitulo.setBounds(10, 0, 974, 100);
 		lblTitulo.setFont(new Font("Tahoma", Font.PLAIN, 50));
@@ -75,6 +75,7 @@ public class VerGrupos extends JFrame {
 		btnVolver = new JButton("Volver");
 		btnVolver.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				controlador.verGruposToGestion();
 			}
 		});
 		btnVolver.setBounds(419, 685, 120, 40);
