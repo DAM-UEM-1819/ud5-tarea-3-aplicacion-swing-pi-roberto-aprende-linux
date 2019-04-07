@@ -23,7 +23,7 @@ public class Main {
 		GestionAsignatura gestionAsignaturas = new GestionAsignatura();
 		GestionProfesores gestionProfesores = new GestionProfesores();
 		GestionSalas gestionSalas = new GestionSalas();
-		GestionUsuarios gestionUsuario = new GestionUsuarios();
+		GestionUsuarios gestionUsuarios = new GestionUsuarios();
 		Perfil perfil = new Perfil();
 		VerGrupos verGrupos = new VerGrupos();
 		//
@@ -34,14 +34,24 @@ public class Main {
 		
 		
 		//Asignamos las vistas al controlador
-		
-//		miControlador.setModelo(miModelo);
-//		miControlador.setVista(miVista);
-//		miControlador.setVistaLogin(miLogin);
-//		miVista.setModelo(miModelo);
-//		miVista.setControlador(miControlador);
-//		miLogin.setModelo(miModelo);
-//		miLogin.setControlador(miControlador);
+		login.setControlador(controlador);
+		home.setControlador(controlador);
+		infoExtra.setControlador(controlador);
+		informes.setControlador(controlador);
+		crearUser.setControlador(controlador);
+		gestion.setControlador(controlador);
+		gestionAcad.setControlador(controlador);
+		gestionActividad.setControlador(controlador);
+		gestionActores.setControlador(controlador);
+		gestionAlumnos.setControlador(controlador);
+		gestionRegistros.setControlador(controlador);
+		gestionAsignaturas.setControlador(controlador);
+		gestionProfesores.setControlador(controlador);
+		gestionSalas.setControlador(controlador);
+		gestionUsuarios.setControlador(controlador);
+		perfil.setControlador(controlador);
+		verGrupos.setControlador(controlador);
+
 
 		
 		
