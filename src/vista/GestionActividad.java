@@ -142,6 +142,11 @@ public class GestionActividad extends JFrame {
 		HeaderPanel.add(lblPerfil);
 
 		btnVolver = new JButton("Volver");
+		btnVolver.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				controlador.gestionActividadToGestion();
+			}
+		});
 		btnVolver.setBounds(100, 685, 120, 40);
 		contentPane.add(btnVolver);
 

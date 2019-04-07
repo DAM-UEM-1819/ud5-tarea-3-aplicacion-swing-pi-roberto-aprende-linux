@@ -124,6 +124,11 @@ public class GestionRegistros extends JFrame {
 		HeaderPanel.add(lblPerfil);
 
 		btnVolver = new JButton("Volver");
+		btnVolver.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				controlador.gestionRegistrosToGestion();
+			}
+		});
 		btnVolver.setBounds(96, 690, 120, 40);
 		contentPane.add(btnVolver);
 

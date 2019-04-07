@@ -98,6 +98,7 @@ public class GestionAlumnos extends JFrame {
 		btnVolver = new JButton("Volver");
 		btnVolver.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				controlador.gestionAlumnosToGestion();
 			}
 		});
 		btnVolver.setBounds(100, 685, 120, 40);

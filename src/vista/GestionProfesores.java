@@ -152,6 +152,11 @@ public class GestionProfesores extends JFrame {
 		HeaderPanel.add(lblPerfil);
 
 		btnVolver = new JButton("Volver");
+		btnVolver.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				controlador.gestionProfesoresToGestion();
+			}
+		});
 		btnVolver.setBounds(100, 685, 120, 40);
 		contentPane.add(btnVolver);
 

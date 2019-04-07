@@ -97,6 +97,7 @@ public class GestionSalas extends JFrame {
 		btnVolver = new JButton("Volver");
 		btnVolver.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				controlador.gestionSalasToGestion();
 			}
 		});
 		
