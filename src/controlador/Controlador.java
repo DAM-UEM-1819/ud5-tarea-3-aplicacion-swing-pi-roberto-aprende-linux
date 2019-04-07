@@ -9,7 +9,7 @@ public class Controlador implements IControlador {
 	private Home home;
 	private Gestion gestion;
 	private Informes informes;
-	private Ocupaciones ocupaciones;
+	//private Ocupaciones ocupaciones;
 	private InformacionExtra infoExtra;
 	private CrearUsuario crearUsuario;
 	private GestionUsuarios gestionUsuarios;
@@ -37,9 +37,9 @@ public class Controlador implements IControlador {
 
 	}
 	
-//	public void confirmacionSalir() {
-//		home.confirmacionSalir();
-//	}
+	public void confirmacionSalir() {
+		home.confirmacionSalir();
+	}
 
 	public void homeToInfoExtra() {
 		home.setVisible(false);
@@ -56,20 +56,20 @@ public class Controlador implements IControlador {
 		gestion.setVisible(true);
 	}
 
-//	public void homeToOcupaciones() {
-//		home.setVisible(false);
-//		ocupaciones.setVisible(true);
-//	}
+	public void homeToOcupaciones() {
+		home.setVisible(false);
+		//ocupaciones.setVisible(true);
+	}
 
 	public void homeToPerfil() {
 		home.setVisible(false);
 		perfil.setVisible(true);
 	}
 
-//	public void ocupacionesToHome() {
-//		ocupaciones.setVisible(false);
-//		home.setVisible(true);
-//	}
+	public void ocupacionesToHome() {
+		//ocupaciones.setVisible(false);
+		home.setVisible(true);
+	}
 
 	public void gestionToPerfil() {
 		gestion.setVisible(false);
@@ -348,5 +348,7 @@ public class Controlador implements IControlador {
 	public void setPerfil(Perfil perfil) {
 		this.perfil = perfil;
 	}
+
+
 
 }
