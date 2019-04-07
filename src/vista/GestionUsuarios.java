@@ -61,7 +61,7 @@ public class GestionUsuarios extends JFrame {
 	private JComboBox comboBoxColumna;
 
 	public GestionUsuarios() {
-		setTitle("Usuarios gesti\u00F3n");
+		setTitle("Hospital simulado");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1000, 800);
 		contentPane = new JPanel();

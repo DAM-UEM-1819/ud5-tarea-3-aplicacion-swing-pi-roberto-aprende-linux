@@ -66,7 +66,7 @@ public class Home extends JFrame {
 	// private JDateChooser calendario;
 
 	public Home() {
-		setTitle("Home");
+		setTitle("Hospital simulado");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1000, 800);
 		contentPane = new JPanel();
