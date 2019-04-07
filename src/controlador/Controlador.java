@@ -36,6 +36,10 @@ public class Controlador implements IControlador {
 		login.setVisible(true);
 
 	}
+	
+//	public void confirmacionSalir() {
+//		home.confirmacionSalir();
+//	}
 
 	public void homeToInfoExtra() {
 		home.setVisible(false);

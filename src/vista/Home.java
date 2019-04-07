@@ -63,7 +63,7 @@ public class Home extends JFrame {
 	private JLabel lblOcupaciones;
 	private JLabel lblNewLabel;
 	private JTextField txtCalendario;
-	//private JDateChooser calendario;
+	// private JDateChooser calendario;
 
 	public Home() {
 		setTitle("Home");
@@ -93,7 +93,13 @@ public class Home extends JFrame {
 		btnSalir = new JButton("Salir");
 		btnSalir.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
+				/*
+				 * Se tendrá que mandar un aviso al controlador El controlador llamara a la
+				 * ventana de confirmacion La ventana de confirmacion llamará al controlador
+				 * homeToLogin
+				 */
+
+				controlador.homeToLogin();
 			}
 		});
 		btnSalir.setBounds(35, 685, 120, 40);
@@ -181,7 +187,7 @@ public class Home extends JFrame {
 		lblNombreSimulador.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNombreSimulador.setBounds(85, 161, 85, 166);
 		infoExtra.add(lblNombreSimulador);
-		
+
 		btnInformes = new JButton("Informes");
 		btnInformes.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -190,7 +196,7 @@ public class Home extends JFrame {
 		});
 		btnInformes.setBounds(518, 685, 144, 40);
 		contentPane.add(btnInformes);
-		
+
 		lblOcupaciones = new JLabel("Ocupaciones");
 		lblOcupaciones.addMouseListener(new MouseAdapter() {
 			@Override
@@ -201,26 +207,26 @@ public class Home extends JFrame {
 		lblOcupaciones.setIcon(new ImageIcon(Home.class.getResource("/javax/swing/plaf/basic/icons/JavaCup16.png")));
 		lblOcupaciones.setBounds(35, 110, 93, 23);
 		contentPane.add(lblOcupaciones);
-		
+
 		lblNewLabel = new JLabel("Selecionar d\u00EDa");
 		lblNewLabel.setBounds(782, 110, 84, 23);
 		contentPane.add(lblNewLabel);
-		
+
 		txtCalendario = new JTextField();
 		txtCalendario.setBounds(859, 111, 70, 20);
 		contentPane.add(txtCalendario);
 		txtCalendario.setColumns(10);
 	}
-	
+
 	public void setControlador(Controlador controlador) {
 		this.controlador = controlador;
 	}
-	
+
 	public void confirmacionSalir() {
 		JOptionPane.showConfirmDialog(rootPane, "¿Esta seguro/a de que desea salir?");
 	}
-	
+
 	public void getTxtCalendario() {
-		
+
 	}
 }

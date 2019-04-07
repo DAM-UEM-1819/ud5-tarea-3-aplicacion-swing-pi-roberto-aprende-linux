@@ -19,6 +19,8 @@ import javax.swing.table.DefaultTableModel;
 import controlador.Controlador;
 
 import java.awt.Label;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class InformacionExtra extends JFrame {
 
@@ -102,6 +104,11 @@ public class InformacionExtra extends JFrame {
 		HeaderPanel.add(lblPerfil);
 
 		btnVolver = new JButton("Volver");
+		btnVolver.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				controlador.infoExtraToHome();
+			}
+		});
 		btnVolver.setBounds(100, 685, 120, 40);
 		contentPane.add(btnVolver);
 
