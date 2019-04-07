@@ -41,7 +41,7 @@ public class Informes extends JFrame {
 	private JComboBox comboBoxInformes;
 
 	public Informes() {
-		setTitle("Información extra");
+		setTitle("Hospital simulado");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1000, 800);
 		contentPane = new JPanel();

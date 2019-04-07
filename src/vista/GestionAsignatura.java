@@ -51,7 +51,7 @@ public class GestionAsignatura extends JFrame {
 
 
 	public GestionAsignatura() {
-		setTitle("Asignatura gesti\u00F3n");
+		setTitle("Hospital simulado");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1000, 800);
 		contentPane = new JPanel();
@@ -66,11 +66,11 @@ public class GestionAsignatura extends JFrame {
 		tablaAsignaturas = new JTable();
 		tablaAsignaturas.setModel(new DefaultTableModel(
 			new Object[][] {
-				{"1", "HCC", "Medicina", "Curso"},
+				{"1", "HCC", "Medicina", "4"},
 				{null, null, null, null},
 			},
 			new String[] {
-				"Numero", "Nombre", "Titulaci\u00F3n", "4"
+				"Numero", "Nombre", "Titulaci\u00F3n", "Curso"
 			}
 		));
 		tablaAsignaturas.setRowHeight(40);

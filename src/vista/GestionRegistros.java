@@ -54,7 +54,7 @@ public class GestionRegistros extends JFrame {
 	 * Create the frame.
 	 */
 	public GestionRegistros() {
-		setTitle("Registros gesti\u00F3n");
+		setTitle("Hospital simulado");
 		setIconImage(Toolkit.getDefaultToolkit().getImage(
 				"C:\\Users\\usuario\\git\\ud5-tarea-3-aplicacion-swing-pi-roberto-aprende-linux\\img\\UEMLogo.png"));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

@@ -44,7 +44,7 @@ public class Perfil extends JFrame {
 	 * Create the frame.
 	 */
 	public Perfil() {
-		setTitle("Perfil");
+		setTitle("Hospital simulado");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1000, 800);
 		contentPane = new JPanel();
