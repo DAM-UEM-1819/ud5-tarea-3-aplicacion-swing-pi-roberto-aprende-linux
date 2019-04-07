@@ -32,6 +32,7 @@ import java.awt.Font;
 import java.awt.FlowLayout;
 import javax.swing.SwingConstants;
 import javax.swing.JCheckBox;
+import javax.swing.ImageIcon;
 
 public class Home extends JFrame {
 
@@ -52,6 +53,11 @@ public class Home extends JFrame {
 	private JLabel lblNombreSimulador;
 	private JLabel lblNuberAlumnos;
 	private JButton btnGestionar;
+	private JButton btnInformes;
+	private JLabel lblOcupaciones;
+	private JLabel lblNewLabel;
+	private JTextField txtCalendario;
+	//private JDateChooser calendario;
 
 	public Home() {
 		setTitle("Home");
@@ -88,10 +94,18 @@ public class Home extends JFrame {
 		contentPane.add(btnSalir);
 
 		btnInfoExtra = new JButton("Informaci\u00F3n Extra");
+		btnInfoExtra.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
 		btnInfoExtra.setBounds(251, 685, 144, 40);
 		contentPane.add(btnInfoExtra);
 
 		btnGestionar = new JButton("Gestionar");
+		btnGestionar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
 		btnGestionar.setBounds(782, 685, 170, 40);
 		contentPane.add(btnGestionar);
 
@@ -101,7 +115,7 @@ public class Home extends JFrame {
 		contentPane.add(Header);
 		Header.setLayout(null);
 
-		lblTitulo = new JLabel("Home");
+		lblTitulo = new JLabel("27/03/2019");
 		lblTitulo.setForeground(new Color(255, 255, 255));
 		lblTitulo.setHorizontalAlignment(SwingConstants.CENTER);
 		lblTitulo.setBounds(250, 0, 500, 100);
@@ -153,10 +167,35 @@ public class Home extends JFrame {
 		lblNombreSimulador.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNombreSimulador.setBounds(85, 161, 85, 166);
 		infoExtra.add(lblNombreSimulador);
+		
+		btnInformes = new JButton("Informes");
+		btnInformes.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnInformes.setBounds(518, 685, 144, 40);
+		contentPane.add(btnInformes);
+		
+		lblOcupaciones = new JLabel("Ocupaciones");
+		lblOcupaciones.setIcon(new ImageIcon(Home.class.getResource("/javax/swing/plaf/basic/icons/JavaCup16.png")));
+		lblOcupaciones.setBounds(35, 110, 93, 23);
+		contentPane.add(lblOcupaciones);
+		
+		lblNewLabel = new JLabel("Selecionar d\u00EDa");
+		lblNewLabel.setBounds(782, 110, 84, 23);
+		contentPane.add(lblNewLabel);
+		
+		txtCalendario = new JTextField();
+		txtCalendario.setBounds(859, 111, 70, 20);
+		contentPane.add(txtCalendario);
+		txtCalendario.setColumns(10);
 	}
 	
 	public void confirmacionSalir() {
 		JOptionPane.showConfirmDialog(rootPane, "¿Esta seguro/a de que desea salir?");
 	}
-
+	
+	public void getTxtCalendario() {
+		
+	}
 }
