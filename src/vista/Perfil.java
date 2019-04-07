@@ -84,9 +84,9 @@ public class Perfil extends JFrame {
 		txtUsuario.setColumns(10);
 		
 		lblUsuario = new JLabel("Usuario");
-		lblUsuario.setFont(new Font("Tahoma", Font.PLAIN, 23));
+		lblUsuario.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		lblUsuario.setForeground(Color.BLACK);
-		lblUsuario.setBounds(194, 181, 91, 54);
+		lblUsuario.setBounds(206, 181, 62, 54);
 		contentPane.add(lblUsuario);
 		
 		txtPasswordActual = new JTextField();
@@ -96,26 +96,26 @@ public class Perfil extends JFrame {
 		
 		lblPasswordActual = new JLabel("Contrase\u00F1a actual");
 		lblPasswordActual.setForeground(Color.BLACK);
-		lblPasswordActual.setFont(new Font("Tahoma", Font.PLAIN, 23));
-		lblPasswordActual.setBounds(584, 181, 198, 54);
+		lblPasswordActual.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		lblPasswordActual.setBounds(635, 181, 147, 54);
 		contentPane.add(lblPasswordActual);
 		
 		lblRolTitulo = new JLabel("Rol");
 		lblRolTitulo.setForeground(Color.BLACK);
-		lblRolTitulo.setFont(new Font("Tahoma", Font.PLAIN, 23));
-		lblRolTitulo.setBounds(213, 358, 43, 54);
+		lblRolTitulo.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		lblRolTitulo.setBounds(212, 402, 31, 54);
 		contentPane.add(lblRolTitulo);
 		
 		lblRol = new JLabel("Administrador");
 		lblRol.setForeground(Color.BLACK);
-		lblRol.setFont(new Font("Tahoma", Font.PLAIN, 17));
-		lblRol.setBounds(180, 412, 104, 30);
+		lblRol.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblRol.setBounds(187, 467, 97, 30);
 		contentPane.add(lblRol);
 		
 		lblPasswordNueva = new JLabel("Nueva contrase\u00F1a");
 		lblPasswordNueva.setForeground(Color.BLACK);
-		lblPasswordNueva.setFont(new Font("Tahoma", Font.PLAIN, 23));
-		lblPasswordNueva.setBounds(584, 317, 198, 54);
+		lblPasswordNueva.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		lblPasswordNueva.setBounds(635, 317, 147, 54);
 		contentPane.add(lblPasswordNueva);
 		
 		txtPasswordNueva = new JTextField();
@@ -125,8 +125,8 @@ public class Perfil extends JFrame {
 		
 		lblConfirmarContrasea = new JLabel("Confirmar contrase\u00F1a");
 		lblConfirmarContrasea.setForeground(Color.BLACK);
-		lblConfirmarContrasea.setFont(new Font("Tahoma", Font.PLAIN, 23));
-		lblConfirmarContrasea.setBounds(544, 445, 238, 54);
+		lblConfirmarContrasea.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		lblConfirmarContrasea.setBounds(604, 443, 178, 54);
 		contentPane.add(lblConfirmarContrasea);
 		
 		txtPasswordConfirmar = new JTextField();
