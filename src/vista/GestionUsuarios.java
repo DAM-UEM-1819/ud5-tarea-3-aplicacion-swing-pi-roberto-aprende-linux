@@ -8,6 +8,9 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import java.awt.GridLayout;
 import javax.swing.BoxLayout;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.ImageIcon;
+
 import net.miginfocom.swing.MigLayout;
 import java.awt.CardLayout;
 import java.awt.GridBagLayout;
@@ -17,6 +20,7 @@ import javax.swing.JTable;
 import javax.swing.JScrollPane;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JTextField;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -46,6 +50,9 @@ public class GestionUsuarios extends JFrame {
 	private JLabel lblUemLogo;
 	private JLabel lblPerfil;
 	private JScrollPane scrollPaneRegistros;
+	private JLabel lblImportarActividades;
+	private JTextField txtBuscador;
+	private JComboBox comboBoxColumna;
 
 	public GestionUsuarios() {
 		setTitle("Usuarios gesti\u00F3n");
@@ -121,6 +128,23 @@ public class GestionUsuarios extends JFrame {
 		lblPerfil.setHorizontalAlignment(SwingConstants.CENTER);
 		lblPerfil.setBounds(760, 0, 224, 100);
 		Header.add(lblPerfil);
+		
+		txtBuscador = new JTextField();
+		txtBuscador.setText("Buscador");
+		txtBuscador.setHorizontalAlignment(SwingConstants.CENTER);
+		txtBuscador.setBounds(663, 114, 86, 20);
+		contentPane.add(txtBuscador);
+		txtBuscador.setColumns(10);
+		
+		comboBoxColumna = new JComboBox();
+		comboBoxColumna.setModel(new DefaultComboBoxModel(new String[] {"Columna","Usuarios", "Rol"  }));
+		comboBoxColumna.setBounds(759, 114, 104, 20);
+		contentPane.add(comboBoxColumna);
+		
+		lblImportarActividades = new JLabel("Importar Usuarios");
+		lblImportarActividades.setIcon(new ImageIcon(GestionActividad.class.getResource("/javax/swing/plaf/basic/icons/JavaCup16.png")));
+		lblImportarActividades.setBounds(100, 114, 124, 20);
+		contentPane.add(lblImportarActividades);
 	}
 	
 	public void borrarUsuarioAlerta() {

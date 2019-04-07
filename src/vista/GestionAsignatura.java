@@ -9,6 +9,7 @@ import java.awt.event.ActionListener;
 
 import javax.swing.ComboBoxEditor;
 import javax.swing.DefaultComboBoxModel;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
@@ -42,6 +43,7 @@ public class GestionAsignatura extends JFrame {
 	private JButton btnModificarAsignatura;
 	private JTextField txtBuscador;
 	private JComboBox comboBoxColumna;
+	private JLabel lblImportarActividades;
 
 
 
@@ -138,17 +140,22 @@ public class GestionAsignatura extends JFrame {
 		contentPane.add(btnAddAsignatura);
 		
 
+		txtBuscador = new JTextField();
 		txtBuscador.setText("Buscador");
 		txtBuscador.setHorizontalAlignment(SwingConstants.CENTER);
 		txtBuscador.setBounds(665, 127, 86, 20);
 		contentPane.add(txtBuscador);
 		txtBuscador.setColumns(10);
 		
-	
 		comboBoxColumna = new JComboBox();
-		comboBoxColumna.setModel(new DefaultComboBoxModel(new String[] {"Columna", "Nombre", "Tipo de actividad", "Tipo de sala", "Simulador", "Documentaci\u00F3n", "Horas de actividad", "A\u00F1o acad\u00E9mico"}));
+		comboBoxColumna.setModel(new DefaultComboBoxModel(new String[] {"Columna","Codigo Registro", "Fecha", "Hora", "Hora Profesor", "Actividad nombre" }));
 		comboBoxColumna.setBounds(761, 127, 104, 20);
 		contentPane.add(comboBoxColumna);
+		
+		lblImportarActividades = new JLabel("Importar Asignaturas");
+		lblImportarActividades.setIcon(new ImageIcon(GestionActividad.class.getResource("/javax/swing/plaf/basic/icons/JavaCup16.png")));
+		lblImportarActividades.setBounds(98, 127, 124, 20);
+		contentPane.add(lblImportarActividades);
 		
 	
 	}

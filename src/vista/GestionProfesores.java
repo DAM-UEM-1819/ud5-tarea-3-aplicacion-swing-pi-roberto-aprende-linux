@@ -5,6 +5,8 @@ import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.Font;
 
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -19,6 +21,7 @@ import javax.swing.table.DefaultTableModel;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JCheckBox;
+import javax.swing.JComboBox;
 
 public class GestionProfesores extends JFrame {
 
@@ -43,6 +46,9 @@ public class GestionProfesores extends JFrame {
 	private JTextField txtEmail1;
 	private JTextField txtEmail2;
 	private JCheckBox chckbxAI_profesores;
+	private JLabel lblImportarActividades;
+	private JComboBox comboBoxColumna;
+	private JTextField txtBuscador;
 
 	/**
 	 * Launch the application.
@@ -166,5 +172,22 @@ public class GestionProfesores extends JFrame {
 				+ "A/I");
 		chckbxAI_profesores.setBounds(439, 633, 41, 23);
 		contentPane.add(chckbxAI_profesores);
+		
+		txtBuscador = new JTextField();
+		txtBuscador.setText("Buscador");
+		txtBuscador.setHorizontalAlignment(SwingConstants.CENTER);
+		txtBuscador.setBounds(665, 127, 86, 20);
+		contentPane.add(txtBuscador);
+		txtBuscador.setColumns(10);
+		
+		comboBoxColumna = new JComboBox();
+		comboBoxColumna.setModel(new DefaultComboBoxModel(new String[] {"Columna", "Numero", "Nombre", "Titulación", "DNI","Activo","Relacion","Telefono 1","Telefono 2","Mail 1","Mail 2" }));
+		comboBoxColumna.setBounds(761, 127, 104, 20);
+		contentPane.add(comboBoxColumna);
+		
+		lblImportarActividades = new JLabel("Importar Profesores");
+		lblImportarActividades.setIcon(new ImageIcon(GestionActividad.class.getResource("/javax/swing/plaf/basic/icons/JavaCup16.png")));
+		lblImportarActividades.setBounds(98, 127, 124, 20);
+		contentPane.add(lblImportarActividades);
 	}
 }

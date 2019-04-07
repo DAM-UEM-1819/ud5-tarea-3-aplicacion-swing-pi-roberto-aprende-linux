@@ -149,6 +149,8 @@ public class GestionSalas extends JFrame {
 		lblPerfil.setHorizontalAlignment(SwingConstants.CENTER);
 		lblPerfil.setBounds(760, 0, 224, 100);
 		Header.add(lblPerfil);
+		
+		
 	}
 	
 	public void modificarSalaAlerta() {

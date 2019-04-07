@@ -145,7 +145,7 @@ public class GestionRegistros extends JFrame {
 		comboBoxColumna.setBounds(761, 127, 104, 20);
 		contentPane.add(comboBoxColumna);
 		
-		lblImportarActividades = new JLabel("Importar Actividades");
+		lblImportarActividades = new JLabel("Importar Registros");
 		lblImportarActividades.setIcon(new ImageIcon(GestionActividad.class.getResource("/javax/swing/plaf/basic/icons/JavaCup16.png")));
 		lblImportarActividades.setBounds(98, 127, 124, 20);
 		contentPane.add(lblImportarActividades);
