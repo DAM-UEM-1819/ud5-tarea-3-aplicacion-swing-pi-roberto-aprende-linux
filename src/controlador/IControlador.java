@@ -1,5 +1,7 @@
 package controlador;
 
+import vista.*;
+
 public interface IControlador {
 	
 	//Login
@@ -82,6 +84,30 @@ public interface IControlador {
 	
 	//Perfil
 	public void perfilToHome();
+	
+	//Ocupaciones
+	public void ocupacionesToHome();
+	
+	//Setters a implemetar 
+	/*
+	public void setLogin(Login login);
+	public void setHome(Home home);
+	public void setGestion(Gestion gestion);
+	public void setInformes(Informes informes);
+	public void setInfoExtra(InformacionExtra infoExtra);
+	public void setCrearUsuario(CrearUsuario crearUsuario);
+	public void setGestionUsuarios(GestionUsuarios gestionUsuarios);
+	public void setGestionAcad(GestionAcad gestionAcad);
+	public void setGestionActividad(GestionActividad gestionActividad);
+	public void setGestionActores(GestionActores getionActores);
+	public void setGestionAlumnos(GestionAlumnos gestionAlumnos);
+	public void setGestionRegistros(GestionRegistros gestionRegistros);
+	public void setGestionAsignatura(GestionAsignatura gestionAsignatura);
+	public void setGestionProfesores(GestionAlumnos gestionProfesores);
+	public void setGestionSalas(GestionSalas gestionSalas);
+	public void setVerGrupos(VerGrupos verGrupos);
+	public void setPerfil(Perfil perfil);
+	*/
 	
 
 }
