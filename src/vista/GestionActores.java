@@ -16,17 +16,15 @@ import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.JCheckBox;
+import javax.swing.JComboBox;
+import javax.swing.ImageIcon;
+import javax.swing.DefaultComboBoxModel;
 
 public class GestionActores extends JFrame {
 
 	private JPanel contentPane;
 	private JTable tablaActores;
-	private JTextField txtCod_actor;
 	private JTextField txtNombre;
-	private JTextField txtEdad;
-	private JTextField txtGenero;
-	private JTextField txtIdioma;
-	private JTextField txtComplexion;
 	private JPanel HeaderPanel;
 	private JScrollPane scrollPane;
 	private JLabel lblTitulo;
@@ -36,6 +34,13 @@ public class GestionActores extends JFrame {
 	private JButton btnAI_actor;
 	private JButton btnAddActor;
 	private JButton btnModificarActor;
+	private JComboBox comboBoxColumna;
+	private JTextField textField;
+	private JLabel label;
+	private JComboBox comboBoxEdad;
+	private JComboBox comboBoxGenero;
+	private JComboBox comboBoxIdioma;
+	private JComboBox comboBoxComplexion;
 
 	/**
 	 * Launch the application.
@@ -62,35 +67,10 @@ public class GestionActores extends JFrame {
 		tablaActores.setRowHeight(40);
 		scrollPane.setViewportView(tablaActores);
 
-		txtCod_actor = new JTextField();
-		txtCod_actor.setBounds(108, 629, 103, 30);
-		contentPane.add(txtCod_actor);
-		txtCod_actor.setColumns(10);
-
 		txtNombre = new JTextField();
-		txtNombre.setBounds(221, 629, 103, 30);
+		txtNombre.setBounds(98, 629, 226, 30);
 		contentPane.add(txtNombre);
 		txtNombre.setColumns(10);
-
-		txtEdad = new JTextField();
-		txtEdad.setBounds(334, 629, 121, 30);
-		contentPane.add(txtEdad);
-		txtEdad.setColumns(10);
-
-		txtGenero = new JTextField();
-		txtGenero.setBounds(465, 629, 103, 30);
-		contentPane.add(txtGenero);
-		txtGenero.setColumns(10);
-
-		txtIdioma = new JTextField();
-		txtIdioma.setBounds(578, 629, 103, 30);
-		contentPane.add(txtIdioma);
-		txtIdioma.setColumns(10);
-
-		txtComplexion = new JTextField();
-		txtComplexion.setColumns(10);
-		txtComplexion.setBounds(691, 629, 103, 30);
-		contentPane.add(txtComplexion);
 
 		HeaderPanel = new JPanel();
 		HeaderPanel.setBackground(new Color(165, 42, 42));
@@ -131,5 +111,46 @@ public class GestionActores extends JFrame {
 		btnAddActor = new JButton(" A\u00F1adir actor");
 		btnAddActor.setBounds(782, 685, 120, 40);
 		contentPane.add(btnAddActor);
+		
+		comboBoxColumna = new JComboBox();
+		comboBoxColumna.setBounds(761, 127, 104, 20);
+		contentPane.add(comboBoxColumna);
+		
+		textField = new JTextField();
+		textField.setText("Buscador");
+		textField.setHorizontalAlignment(SwingConstants.CENTER);
+		textField.setColumns(10);
+		textField.setBounds(665, 127, 86, 20);
+		contentPane.add(textField);
+		
+		label = new JLabel("Importar Actividades");
+		label.setIcon(new ImageIcon(GestionActores.class.getResource("/javax/swing/plaf/basic/icons/JavaCup16.png")));
+		label.setBounds(98, 127, 124, 20);
+		contentPane.add(label);
+		
+		comboBoxEdad = new JComboBox();
+		comboBoxEdad.setModel(new DefaultComboBoxModel(new String[] {"Edad"}));
+		comboBoxEdad.setBounds(334, 629, 121, 30);
+		contentPane.add(comboBoxEdad);
+		
+		comboBoxGenero = new JComboBox();
+		comboBoxGenero.setModel(new DefaultComboBoxModel(new String[] {"G\u00E9nero"}));
+		comboBoxGenero.setBounds(465, 629, 103, 30);
+		contentPane.add(comboBoxGenero);
+		
+		comboBoxIdioma = new JComboBox();
+		comboBoxIdioma.setModel(new DefaultComboBoxModel(new String[] {"Idioma"}));
+		comboBoxIdioma.setBounds(575, 629, 103, 30);
+		contentPane.add(comboBoxIdioma);
+		
+		comboBoxComplexion = new JComboBox();
+		comboBoxComplexion.setModel(new DefaultComboBoxModel(new String[] {"Complexi\u00F3n"}));
+		comboBoxComplexion.setBounds(688, 629, 103, 30);
+		contentPane.add(comboBoxComplexion);
+		
+		JCheckBox chckbxActivo = new JCheckBox("Activo");
+		chckbxActivo.setHorizontalAlignment(SwingConstants.CENTER);
+		chckbxActivo.setBounds(801, 633, 97, 23);
+		contentPane.add(chckbxActivo);
 	}
 }
